@@ -1,0 +1,538 @@
+{
+	"info": {
+		"_postman_id": "53867129-66bd-47ed-aa79-2ef271b6ed30",
+		"name": "Ame Challenge iOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Banner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://alodjinha.herokuapp.com/banner",
+					"protocol": "https",
+					"host": [
+						"alodjinha",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"banner"
+					]
+				},
+				"description": "Model:\n\n{\n  \"data\": [\n    {\n      \"id\": 0,\n      \"linkUrl\": \"string\",\n      \"urlImagem\": \"string\"\n    }\n  ]\n}"
+			},
+			"response": [
+				{
+					"name": "Banner",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://alodjinha.herokuapp.com/banner",
+							"protocol": "https",
+							"host": [
+								"alodjinha",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"banner"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Jun 2019 00:53:34 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"urlImagem\": \"https://images-submarino.b2w.io/spacey/2017/02/06/MainTop_GAMES_FEV17.png\",\n            \"linkUrl\": \"https://images-submarino.b2w.io/spacey/2017/02/06/MainTop_GAMES_FEV17.png\"\n        },\n        {\n            \"id\": 2,\n            \"urlImagem\": \"https://images-submarino.b2w.io/spacey/2017/02/06/DESTAQUE_FULL_CARTAO_CASA_FEV.png\",\n            \"linkUrl\": \"https://images-submarino.b2w.io/spacey/2017/02/06/DESTAQUE_FULL_CARTAO_CASA_FEV.png\"\n        },\n        {\n            \"id\": 3,\n            \"urlImagem\": \"https://images-submarino.b2w.io/spacey/2017/02/03/sub-home-dest-full-655x328-touch-play.png\",\n            \"linkUrl\": \"https://images-submarino.b2w.io/spacey/2017/02/03/sub-home-dest-full-655x328-touch-play.png\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Categoria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://alodjinha.herokuapp.com/categoria",
+					"protocol": "https",
+					"host": [
+						"alodjinha",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"categoria"
+					]
+				},
+				"description": "Model:\n\n{\n  \"data\": [\n    {\n      \"descricao\": \"string\",\n      \"id\": 0,\n      \"urlImagem\": \"string\"\n    }\n  ]\n}"
+			},
+			"response": [
+				{
+					"name": "Categoria",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://alodjinha.herokuapp.com/categoria",
+							"protocol": "https",
+							"host": [
+								"alodjinha",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Jun 2019 00:55:20 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"descricao\": \"Games\",\n            \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n        },\n        {\n            \"id\": 2,\n            \"descricao\": \"Livros\",\n            \"urlImagem\": \"http://4.bp.blogspot.com/-6Bta1H9d22g/UJAIJbqcHhI/AAAAAAAAKi4/hvgjWrlFc64/s1600/resenha-missiologia.png\"\n        },\n        {\n            \"id\": 3,\n            \"descricao\": \"Celulares\",\n            \"urlImagem\": \"http://pt.seaicons.com/wp-content/uploads/2015/11/Mobile-Smartphone-icon.png\"\n        },\n        {\n            \"id\": 4,\n            \"descricao\": \"Informática\",\n            \"urlImagem\": \"http://portal.ifrn.edu.br/campus/ceara-mirim/noticias/ifrn-oferece-curso-de-informatica-basica-para-pais-dos-estudantes/image_preview\"\n        },\n        {\n            \"id\": 5,\n            \"descricao\": \"Eletrodoméstico\",\n            \"urlImagem\": \"http://classificados.folharegiao.com.br/files/classificados_categoria/photo/8/sm_4d5ed3beb0f31b61cb9a01e46ecd0cf9.png\"\n        },\n        {\n            \"id\": 6,\n            \"descricao\": \"TVs\",\n            \"urlImagem\": \"http://i.utdstc.com/icons/256/terrarium-tv-android.png\"\n        },\n        {\n            \"id\": 7,\n            \"descricao\": \"Filmes e Séries\",\n            \"urlImagem\": \"https://pbs.twimg.com/profile_images/801033586438733824/91Y_N91t_reasonably_small.jpg\"\n        },\n        {\n            \"id\": 8,\n            \"descricao\": \"Móveis e Decorações\",\n            \"urlImagem\": \"https://image.flaticon.com/icons/png/128/148/148188.png\"\n        },\n        {\n            \"id\": 9,\n            \"descricao\": \"Moda, Beleza e Perfumaria\",\n            \"urlImagem\": \"http://icon-icons.com/icons2/196/PNG/128/fashion_23852.png\"\n        },\n        {\n            \"id\": 10,\n            \"descricao\": \"Papelaria\",\n            \"urlImagem\": \"http://esen.pt/in/images/stories/skills_256.png\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Lista de produtos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://alodjinha.herokuapp.com/produto?limit=20&offset=0",
+					"protocol": "https",
+					"host": [
+						"alodjinha",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"produto"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "20"
+						},
+						{
+							"key": "categoriaId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				},
+				"description": "Model:\n\n{\n  \"data\": [\n    {\n      \"categoria\": {\n        \"descricao\": \"string\",\n        \"id\": 0,\n        \"urlImagem\": \"string\"\n      },\n      \"descricao\": \"string\",\n      \"id\": 0,\n      \"nome\": \"string\",\n      \"precoDe\": 0,\n      \"precoPor\": 0,\n      \"urlImagem\": \"string\"\n    }\n  ],\n  \"offset\": 0,\n  \"total\": 0\n}"
+			},
+			"response": [
+				{
+					"name": "Lista de produtos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://alodjinha.herokuapp.com/produto?limit=20&offset=0",
+							"protocol": "https",
+							"host": [
+								"alodjinha",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"produto"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "categoriaId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Jun 2019 01:09:07 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nome\": \"Game Horizon Zero Down\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/130836/1/130836199P1.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"nome\": \"NBA2K17\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/128815/8/128815807_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"nome\": \"Metal Gear V\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129681/4/129681417P1.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"nome\": \"Gear of War 4\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/128831/8/128831891_1GG.png\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 5,\n            \"nome\": \"Nioh\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/131051/8/131051887_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 6,\n            \"nome\": \"Watch Dogs 2\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129498/5/129498508_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 7,\n            \"nome\": \"Fifa 17\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/128926/4/128926443_1GG.png\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 8,\n            \"nome\": \"Battlefield 1\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129305/2/129305235_1GG.png\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 9,\n            \"nome\": \"For Honor\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/131045/4/131045410_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 10,\n            \"nome\": \"Rise of the Tomb Raider\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129125/0/129125074_1GG.png\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 11,\n            \"nome\": \"Forza Horizon 3\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/128831/2/128831209_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 12,\n            \"nome\": \"Final Fantasy 15\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/128349/8/128349851_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 13,\n            \"nome\": \"Just Dance 2017\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129368/8/129368834_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 14,\n            \"nome\": \"Skyrim\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129768/6/129768635_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 15,\n            \"nome\": \"Dishonered 2\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129773/7/129773776_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 16,\n            \"nome\": \"Assassins Creed\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129735/8/129735892_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 17,\n            \"nome\": \"Titanfall 2\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129341/3/129341367_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 18,\n            \"nome\": \"Dragon Ball 2 Xenoverse\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129152/7/129152793_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 19,\n            \"nome\": \"Hitman\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/131017/8/131017814_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 20,\n            \"nome\": \"Ghost Recon\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/131132/6/131132644_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        }\n    ],\n    \"offset\": 0,\n    \"total\": 75\n}"
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://alodjinha.herokuapp.com/produto/20",
+					"protocol": "https",
+					"host": [
+						"alodjinha",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"produto",
+						"20"
+					]
+				},
+				"description": "Model:\n\n{\n  \"categoria\": {\n    \"descricao\": \"string\",\n    \"id\": 0,\n    \"urlImagem\": \"string\"\n  },\n  \"descricao\": \"string\",\n  \"id\": 0,\n  \"nome\": \"string\",\n  \"precoDe\": 0,\n  \"precoPor\": 0,\n  \"urlImagem\": \"string\"\n}"
+			},
+			"response": [
+				{
+					"name": "Produto",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://alodjinha.herokuapp.com/produto/20",
+							"protocol": "https",
+							"host": [
+								"alodjinha",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"produto",
+								"20"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Jun 2019 01:12:23 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 20,\n    \"nome\": \"Ghost Recon\",\n    \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/131132/6/131132644_1GG.jpg\",\n    \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n    \"precoDe\": 299,\n    \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n    \"categoria\": {\n        \"id\": 1,\n        \"descricao\": \"Games\",\n        \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n    }\n}"
+				},
+				{
+					"name": "Lista de produtos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://alodjinha.herokuapp.com/produto?limit=20&offset=0",
+							"protocol": "https",
+							"host": [
+								"alodjinha",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"produto"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "categoriaId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Jun 2019 01:09:07 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nome\": \"Game Horizon Zero Down\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/130836/1/130836199P1.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"nome\": \"NBA2K17\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/128815/8/128815807_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"nome\": \"Metal Gear V\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129681/4/129681417P1.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"nome\": \"Gear of War 4\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/128831/8/128831891_1GG.png\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 5,\n            \"nome\": \"Nioh\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/131051/8/131051887_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 6,\n            \"nome\": \"Watch Dogs 2\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129498/5/129498508_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 7,\n            \"nome\": \"Fifa 17\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/128926/4/128926443_1GG.png\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 8,\n            \"nome\": \"Battlefield 1\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129305/2/129305235_1GG.png\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 9,\n            \"nome\": \"For Honor\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/131045/4/131045410_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 10,\n            \"nome\": \"Rise of the Tomb Raider\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129125/0/129125074_1GG.png\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 11,\n            \"nome\": \"Forza Horizon 3\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/128831/2/128831209_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 12,\n            \"nome\": \"Final Fantasy 15\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/128349/8/128349851_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 13,\n            \"nome\": \"Just Dance 2017\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129368/8/129368834_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 14,\n            \"nome\": \"Skyrim\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129768/6/129768635_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 15,\n            \"nome\": \"Dishonered 2\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129773/7/129773776_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 16,\n            \"nome\": \"Assassins Creed\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129735/8/129735892_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 17,\n            \"nome\": \"Titanfall 2\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129341/3/129341367_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 18,\n            \"nome\": \"Dragon Ball 2 Xenoverse\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129152/7/129152793_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 19,\n            \"nome\": \"Hitman\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/131017/8/131017814_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 20,\n            \"nome\": \"Ghost Recon\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/131132/6/131132644_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        }\n    ],\n    \"offset\": 0,\n    \"total\": 75\n}"
+				}
+			]
+		},
+		{
+			"name": "Lista de produtos mais vendidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://alodjinha.herokuapp.com/produto/maisvendidos",
+					"protocol": "https",
+					"host": [
+						"alodjinha",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"produto",
+						"maisvendidos"
+					]
+				},
+				"description": "Model:\n\n{\n  \"data\": [\n    {\n      \"categoria\": {\n        \"descricao\": \"string\",\n        \"id\": 0,\n        \"urlImagem\": \"string\"\n      },\n      \"descricao\": \"string\",\n      \"id\": 0,\n      \"nome\": \"string\",\n      \"precoDe\": 0,\n      \"precoPor\": 0,\n      \"urlImagem\": \"string\"\n    }\n  ]\n}"
+			},
+			"response": [
+				{
+					"name": "Lista de produtos mais vendidos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://alodjinha.herokuapp.com/produto/maisvendidos",
+							"protocol": "https",
+							"host": [
+								"alodjinha",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"produto",
+								"maisvendidos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Jun 2019 01:09:56 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 7,\n            \"nome\": \"Fifa 17\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/128926/4/128926443_1GG.png\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 11,\n            \"nome\": \"Forza Horizon 3\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/128831/2/128831209_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 16,\n            \"nome\": \"Assassins Creed\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129735/8/129735892_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 21,\n            \"nome\": \"Mafia 3\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/128938/9/128938997_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 28,\n            \"nome\": \"Mortal Kombat XL\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/126077/6/126077695_1GG.jpg\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 31,\n            \"nome\": \"GTA V\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/120857/6/120857615_1GG.png\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 33,\n            \"nome\": \"Uncharted Collections\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/124494/3/124494399_1GG.png\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 40,\n            \"nome\": \"Drive Club\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/120585/3/120585373_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 26,\n            \"nome\": \"Resident Evil\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129958/8/129958851_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 23,\n            \"nome\": \"Batman VR\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129345/1/129345173_1GG.jpg\",\n            \"descricao\": \"Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.<br/><br/>A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!<br/><br/>No meu xinélo da humildade eu gostaria muito de ver o Neymar e o Ganso. Por que eu acho que.... 11 entre 10 brasileiros gostariam. Você veja, eu já vi, parei de ver. Voltei a ver, e acho que o Neymar e o Ganso têm essa capacidade de fazer a gente olhar.<br/><br/>\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        },\n        {\n            \"id\": 10,\n            \"nome\": \"Rise of the Tomb Raider\",\n            \"urlImagem\": \"https://images-submarino.b2w.io/produtos/01/00/item/129125/0/129125074_1GG.png\",\n            \"descricao\": \"Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Diuretics paradis num copo é motivis de denguis.<br/><br/>Copo furadis é disculpa de bebadis, arcu quam euismod magna. Casamentiss faiz malandris se pirulitá. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. in elementis mé pra quem é amistosis quis leo.<br/><br/>A ordem dos tratores não altera o pão duris Delegadis gente finis, bibendum egestas augue arcu ut est. Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\",\n            \"precoDe\": 299,\n            \"precoPor\": 119.9899999999999948840923025272786617279052734375,\n            \"categoria\": {\n                \"id\": 1,\n                \"descricao\": \"Games\",\n                \"urlImagem\": \"http://39ahd9aq5l9101brf3b8dq58.wpengine.netdna-cdn.com/wp-content/uploads/2013/06/3D-Gaming.png\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Reserva de produto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://alodjinha.herokuapp.com/produto/20",
+					"protocol": "https",
+					"host": [
+						"alodjinha",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"produto",
+						"20"
+					]
+				},
+				"description": "Respostas:\n\n{\n\t\"result\": \"success\"\n}\n\nou\n\n{\n\t\"result\": \"error\",\n\t\"mensagem\": \"Produto não encontrado\"\n}"
+			},
+			"response": []
+		}
+	]
+}
