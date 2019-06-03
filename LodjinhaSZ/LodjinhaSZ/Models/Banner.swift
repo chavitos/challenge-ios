@@ -13,8 +13,15 @@ import Foundation
 struct Banner: Codable {
 	
     let id			: Int?
-	let linkUrl		: String?
-	let urlImagem	: String?
+	let urlLink		: String?
+	let imageUrl	: String?
+	
+	enum CodingKeys:String,CodingKey{
+		
+		case id
+		case urlLink 	= "linkUrl"
+		case imageUrl 	= "urlImagem"
+	}
 }
 
 struct BannerList: DataList {
