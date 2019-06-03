@@ -16,7 +16,7 @@
 		9222035822A30BA4003614DC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9222035722A30BA4003614DC /* Product.swift */; };
 		9222035A22A30D23003614DC /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9222035922A30D23003614DC /* DataList.swift */; };
 		9253C19A22A34214005F6580 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253C19922A34214005F6580 /* NetworkManager.swift */; };
-		92B2FCD522A485E700653163 /* DownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCD422A485E700653163 /* DownloadHelper.swift */; };
+		92B2FCD522A485E700653163 /* UIImageView+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCD422A485E700653163 /* UIImageView+Network.swift */; };
 		92B2FCDC22A4868E00653163 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCD622A4868E00653163 /* HomePresenter.swift */; };
 		92B2FCDD22A4868E00653163 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCD722A4868E00653163 /* HomeWorker.swift */; };
 		92B2FCDE22A4868E00653163 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCD822A4868E00653163 /* HomeRouter.swift */; };
@@ -24,6 +24,8 @@
 		92B2FCE022A4868E00653163 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCDA22A4868E00653163 /* HomeViewController.swift */; };
 		92B2FCE122A4868E00653163 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCDB22A4868E00653163 /* HomeInteractor.swift */; };
 		92B2FCE622A4949600653163 /* BannerListNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCE522A4949600653163 /* BannerListNetworkWorker.swift */; };
+		92B2FCE822A4C99900653163 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCE722A4C99900653163 /* CustomTabBar.swift */; };
+		92B2FCEB22A4D3BA00653163 /* CategoryListNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCEA22A4D3B900653163 /* CategoryListNetworkWorker.swift */; };
 		92BCC8FC22A1F59D009FFDDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCC8FB22A1F59D009FFDDF /* AppDelegate.swift */; };
 		92BCC90122A1F59D009FFDDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BCC8FF22A1F59D009FFDDF /* Main.storyboard */; };
 		92BCC90322A1F59D009FFDDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BCC90222A1F59D009FFDDF /* Assets.xcassets */; };
@@ -66,7 +68,7 @@
 		9222035722A30BA4003614DC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		9222035922A30D23003614DC /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
 		9253C19922A34214005F6580 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		92B2FCD422A485E700653163 /* DownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadHelper.swift; sourceTree = "<group>"; };
+		92B2FCD422A485E700653163 /* UIImageView+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Network.swift"; sourceTree = "<group>"; };
 		92B2FCD622A4868E00653163 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		92B2FCD722A4868E00653163 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
 		92B2FCD822A4868E00653163 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -74,6 +76,8 @@
 		92B2FCDA22A4868E00653163 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		92B2FCDB22A4868E00653163 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		92B2FCE522A4949600653163 /* BannerListNetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerListNetworkWorker.swift; sourceTree = "<group>"; };
+		92B2FCE722A4C99900653163 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		92B2FCEA22A4D3B900653163 /* CategoryListNetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListNetworkWorker.swift; sourceTree = "<group>"; };
 		92BCC8F822A1F59D009FFDDF /* LodjinhaSZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LodjinhaSZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BCC8FB22A1F59D009FFDDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92BCC90022A1F59D009FFDDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -194,20 +198,29 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		92B2FCD322A485DB00653163 /* Helper */ = {
+		92B2FCD322A485DB00653163 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				92B2FCD422A485E700653163 /* DownloadHelper.swift */,
+				92B2FCD422A485E700653163 /* UIImageView+Network.swift */,
 			);
-			path = Helper;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		92B2FCE422A493FA00653163 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
 				92B2FCE522A4949600653163 /* BannerListNetworkWorker.swift */,
+				92B2FCEA22A4D3B900653163 /* CategoryListNetworkWorker.swift */,
 			);
 			path = Workers;
+			sourceTree = "<group>";
+		};
+		92B2FCE922A4CD6000653163 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				92B2FCE722A4C99900653163 /* CustomTabBar.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		92BCC8EF22A1F59C009FFDDF = {
@@ -235,7 +248,8 @@
 		92BCC8FA22A1F59D009FFDDF /* LodjinhaSZ */ = {
 			isa = PBXGroup;
 			children = (
-				92B2FCD322A485DB00653163 /* Helper */,
+				92B2FCE922A4CD6000653163 /* Custom */,
+				92B2FCD322A485DB00653163 /* Helpers */,
 				9222034F22A30880003614DC /* Managers */,
 				9222035022A3088F003614DC /* Models */,
 				9222035122A3089B003614DC /* Scenes */,
@@ -502,9 +516,11 @@
 				9222035A22A30D23003614DC /* DataList.swift in Sources */,
 				92BCC8FC22A1F59D009FFDDF /* AppDelegate.swift in Sources */,
 				9222035822A30BA4003614DC /* Product.swift in Sources */,
+				92B2FCE822A4C99900653163 /* CustomTabBar.swift in Sources */,
 				92B2FCDF22A4868E00653163 /* HomeModels.swift in Sources */,
+				92B2FCEB22A4D3BA00653163 /* CategoryListNetworkWorker.swift in Sources */,
 				9221D8AB22A4369800E7133A /* ProductReserve.swift in Sources */,
-				92B2FCD522A485E700653163 /* DownloadHelper.swift in Sources */,
+				92B2FCD522A485E700653163 /* UIImageView+Network.swift in Sources */,
 				92B2FCDC22A4868E00653163 /* HomePresenter.swift in Sources */,
 				9222035422A30A63003614DC /* Banner.swift in Sources */,
 				92B2FCDD22A4868E00653163 /* HomeWorker.swift in Sources */,
@@ -692,7 +708,10 @@
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -709,7 +728,10 @@
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -726,7 +748,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -744,7 +770,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -761,7 +791,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -778,7 +812,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

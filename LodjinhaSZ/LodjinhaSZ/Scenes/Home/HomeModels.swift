@@ -33,7 +33,7 @@ enum Home {
 		}
 	}
 	
-	enum CategoryList {
+	enum GetCategoryList {
 		
 		struct Request {
 			
@@ -41,15 +41,17 @@ enum Home {
 		}
 		struct Response {
 			
-			
+			var categories:CategoryList?
+			var error:Error?
 		}
 		struct ViewModel {
 			
-			
+			var categories:[CategoryViewModel]?
+			var error:Error?
 		}
 	}
 	
-	enum ProductList {
+	enum GetPopProductList {
 		
 		struct Request {
 			
@@ -68,6 +70,13 @@ enum Home {
 
 struct BannerViewModel {
 	
-	var bannerImage		:UIImage?
+	var bannerImageUrl	:String?
 	var bannerLink		:String?
+}
+
+struct CategoryViewModel {
+	
+	var id					: Int?
+	var desc				: String?
+	var categoryImageUrl	: String?
 }

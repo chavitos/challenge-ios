@@ -12,13 +12,13 @@
 
 import UIKit
 
-protocol HomeDisplayLogic: class
-{
+protocol HomeDisplayLogic: class {
 	func displayBanners(viewModel: Home.GetBannerList.ViewModel)
+	func displayCategories(viewModel: Home.GetCategoryList.ViewModel)
 }
 
-class HomeViewController: UIViewController, HomeDisplayLogic
-{
+class HomeViewController: UIViewController, HomeDisplayLogic {
+	
 	var interactor: HomeBusinessLogic?
 	var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
 	
@@ -69,7 +69,12 @@ class HomeViewController: UIViewController, HomeDisplayLogic
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		let navImage = UIImage(named: "logoNavbar")
+		let navImageView = UIImageView(image: navImage)
+		self.navigationItem.titleView = navImageView
+		
 		getBanners()
+		getCategories()
 	}
 	
 	// MARK: GetBanners
@@ -83,6 +88,19 @@ class HomeViewController: UIViewController, HomeDisplayLogic
 	}
 	
 	func displayBanners(viewModel: Home.GetBannerList.ViewModel) {
+		
+
+	}
+	
+	// MARK: Get Categories
+	
+	func getCategories() {
+		
+		let request = Home.GetCategoryList.Request()
+		interactor?.getCategories(request: request)
+	}
+	
+	func displayCategories(viewModel: Home.GetCategoryList.ViewModel) {
 		
 		
 	}

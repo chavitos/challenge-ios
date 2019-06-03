@@ -14,6 +14,7 @@ import UIKit
 
 protocol HomePresentationLogic {
 	func presentBanners(response: Home.GetBannerList.Response)
+	func presentCategories(response: Home.GetCategoryList.Response)
 }
 
 class HomePresenter: HomePresentationLogic {
@@ -24,42 +25,61 @@ class HomePresenter: HomePresentationLogic {
 	
 	func presentBanners(response: Home.GetBannerList.Response) {
 		
+		var viewModel:Home.GetBannerList.ViewModel
+		
 		if response.error == nil, let banners = response.banners {
 			
-			getViewModel(ofBanners: banners) { (bannerViewModel) in
-				
-				let viewModel = Home.GetBannerList.ViewModel(banners: bannerViewModel, error: nil)
-				self.viewController?.displayBanners(viewModel: viewModel)
-
-			}
+			let bannersViewModel = getViewModel(ofBanners: banners)
+			viewModel = Home.GetBannerList.ViewModel(banners: bannersViewModel, error: nil)
 		}else{
-			let viewModel = Home.GetBannerList.ViewModel(banners: nil, error: response.error)
-			viewController?.displayBanners(viewModel: viewModel)
+			
+			viewModel = Home.GetBannerList.ViewModel(banners: nil, error: response.error)
 		}
+		
+		self.viewController?.displayBanners(viewModel: viewModel)
 	}
 	
-	private func getViewModel(ofBanners banners:BannerList, completion:@escaping([BannerViewModel]) -> Void) {
+	private func getViewModel(ofBanners banners:BannerList) -> [BannerViewModel] {
 		
-		let group = DispatchGroup()
 		var viewModelBanners:[BannerViewModel] = []
 		
 		for banner in banners.data ?? [] {
 			
-			group.enter()
-			if let url = banner.imageUrl {
-				
-				DownloadHelper.sharedInstance.cachedImageRequest(fromUrl: url) { (image, error) in
-					
-					group.leave()
-					
-					let viewModelBanner = BannerViewModel(bannerImage: image, bannerLink: banner.urlLink)
-					viewModelBanners.append(viewModelBanner)
-				}
-			}
+			let viewModelBanner = BannerViewModel(bannerImageUrl: banner.imageUrl, bannerLink: banner.urlLink)
+			viewModelBanners.append(viewModelBanner)
 		}
 		
-		group.notify(queue: .global()) {
-			completion(viewModelBanners)
+		return viewModelBanners
+	}
+	
+	// MARK: Get Categories
+	
+	func presentCategories(response: Home.GetCategoryList.Response) {
+		
+		var viewModel:Home.GetCategoryList.ViewModel
+		
+		if response.error == nil, let categories = response.categories {
+			
+			let categoriesViewModel = getViewModel(ofCategories: categories)
+			viewModel = Home.GetCategoryList.ViewModel(categories: categoriesViewModel, error: nil)
+		}else{
+			
+			viewModel = Home.GetCategoryList.ViewModel(categories: nil, error: response.error)
 		}
+		
+		viewController?.displayCategories(viewModel: viewModel)
+	}
+	
+	private func getViewModel(ofCategories categories:CategoryList) -> [CategoryViewModel] {
+		
+		var viewModelCategories:[CategoryViewModel] = []
+		
+		for category in categories.data ?? [] {
+			
+			let viewModelCategory = CategoryViewModel(id: category.id, desc: category.desc, categoryImageUrl: category.imageUrl)
+			viewModelCategories.append(viewModelCategory)
+		}
+		
+		return viewModelCategories
 	}
 }

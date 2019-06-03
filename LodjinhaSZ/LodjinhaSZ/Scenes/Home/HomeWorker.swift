@@ -15,11 +15,11 @@ import UIKit
 class HomeWorker {
 	
 	var bannerWorker:BannerListWorkerProtocol?
-	var categoryWorker:Any?
+	var categoryWorker:CategoryListWorkerProtocol?
 	var mostPopProductWorker:Any?
 	
 	init(_ bannerWorker:BannerListWorkerProtocol?,
-		 _ categoryWorker:Any?,
+		 _ categoryWorker:CategoryListWorkerProtocol?,
 		 _ mostPopProductWorker:Any?) {
 		
 		self.bannerWorker = bannerWorker
@@ -37,19 +37,39 @@ class HomeWorker {
 					let bannerList = try bannerList()
 					completion(bannerList,nil)
 				}catch let error {
-					
 					completion(nil, WorkerErrors.networkProblem(error: error))
 				}
 			}
 		}else{
 			completion(nil, WorkerErrors.workerNil)
 		}
+	}
+	
+	func getCategories(completion:@escaping(CategoryList?,WorkerErrors?) -> Void) {
 		
+		if let worker = categoryWorker {
+			
+			worker.getCategories { (categoryList: () throws -> CategoryList) in
+				
+				do {
+					let categoryList = try categoryList()
+					completion(categoryList,nil)
+				}catch let error {
+					completion(nil, WorkerErrors.networkProblem(error: error))
+				}
+			}
+		}else{
+			completion(nil, WorkerErrors.workerNil)
+		}
 	}
 }
 
 protocol BannerListWorkerProtocol {
 	func getBanners(completion:@escaping(() throws -> BannerList) -> Void)
+}
+
+protocol CategoryListWorkerProtocol {
+	func getCategories(completion:@escaping(() throws -> CategoryList) -> Void)
 }
 
 enum WorkerErrors:Error {

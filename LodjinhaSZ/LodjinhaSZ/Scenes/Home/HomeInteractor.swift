@@ -15,6 +15,7 @@ import UIKit
 protocol HomeBusinessLogic {
 	
 	func getBanners(request: Home.GetBannerList.Request)
+	func getCategories(request: Home.GetCategoryList.Request)
 }
 
 protocol HomeDataStore {
@@ -27,6 +28,7 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 	var presenter		: HomePresentationLogic?
 	var worker			: HomeWorker?
 	let bannerWorker	: BannerListNetworkWorker = BannerListNetworkWorker()
+	let categoryWorker 	: CategoryListNetworkWorker = CategoryListNetworkWorker()
 	//var name: String = ""
 	
 	// MARK: Get Banners
@@ -48,5 +50,25 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 			
 			self.presenter?.presentBanners(response: response)
 		})
+	}
+	
+	func getCategories(request: Home.GetCategoryList.Request) {
+		
+		worker = HomeWorker(nil, categoryWorker, nil)
+		worker?.getCategories(completion: { (categories, error) in
+			
+			let response:Home.GetCategoryList.Response
+			
+			if error == nil, let categories = categories {
+				
+				response = Home.GetCategoryList.Response(categories: categories,error: nil)
+			}else {
+				
+				response = Home.GetCategoryList.Response(categories: nil, error: error)
+			}
+			
+			self.presenter?.presentCategories(response: response)
+		})
+		
 	}
 }
