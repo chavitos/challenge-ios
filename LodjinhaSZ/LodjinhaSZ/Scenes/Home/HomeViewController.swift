@@ -81,7 +81,8 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	
 	// MARK: GetBanners
 	
-	//@IBOutlet weak var nameTextField: UITextField!
+	@IBOutlet weak var bannerPageControl: UIPageControl!
+	@IBOutlet weak var bannerScrollView: BannerScrollView!
 	
 	func getBanners() {
 		
@@ -91,10 +92,15 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	
 	func displayBanners(viewModel: Home.GetBannerList.ViewModel) {
 		
-		print("\(viewModel.banners?.count ?? 0) banners.")
+		bannerPageControl.numberOfPages = viewModel.banners?.count ?? 0
+		bannerScrollView.configBanners(viewModel.banners ?? [])
 	}
 	
 	// MARK: Get Categories
+	
+	@IBOutlet weak var categoryCollection: UICollectionView!
+	
+	let categoryCellIdentifier = "categoryCell"
 	
 	func getCategories() {
 		
@@ -109,6 +115,10 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	
 	// MARK: Get Pop Products
 	
+	@IBOutlet weak var productTableView: UITableView!
+	
+	let productCellIdentifier = "productCell"
+	
 	func getPopProducts() {
 		
 		let request = Home.GetPopProductList.Request()
@@ -118,5 +128,45 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	func displayPopProducts(viewModel: Home.GetPopProductList.ViewModel) {
 		
 		print("\(viewModel.popProducts?.count ?? 0) produtos mais vendidos.")
+	}
+}
+
+extension HomeViewController:UIScrollViewDelegate {
+	
+	func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+		
+		let page = scrollView.contentOffset.x / scrollView.frame.size.width
+		bannerPageControl.currentPage = Int(page)
+	}
+}
+
+extension HomeViewController:UITableViewDelegate, UITableViewDataSource {
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		
+		return 0
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		
+		return UITableViewCell()
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
+		
+	}
+}
+
+extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSource {
+	
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		
+		return 0
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		
+		return UICollectionViewCell()
 	}
 }
