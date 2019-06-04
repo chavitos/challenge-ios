@@ -15,6 +15,8 @@
 		9222035622A30AC7003614DC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9222035522A30AC7003614DC /* Category.swift */; };
 		9222035822A30BA4003614DC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9222035722A30BA4003614DC /* Product.swift */; };
 		9222035A22A30D23003614DC /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9222035922A30D23003614DC /* DataList.swift */; };
+		9226BEFE22A5FCF50054FCD2 /* PopProductListNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9226BEFD22A5FCF50054FCD2 /* PopProductListNetworkWorker.swift */; };
+		9226BF0022A604FF0054FCD2 /* NumberFormatter+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9226BEFF22A604FF0054FCD2 /* NumberFormatter+Currency.swift */; };
 		9253C19A22A34214005F6580 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253C19922A34214005F6580 /* NetworkManager.swift */; };
 		92B2FCD522A485E700653163 /* UIImageView+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCD422A485E700653163 /* UIImageView+Network.swift */; };
 		92B2FCDC22A4868E00653163 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCD622A4868E00653163 /* HomePresenter.swift */; };
@@ -67,6 +69,8 @@
 		9222035522A30AC7003614DC /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9222035722A30BA4003614DC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		9222035922A30D23003614DC /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
+		9226BEFD22A5FCF50054FCD2 /* PopProductListNetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopProductListNetworkWorker.swift; sourceTree = "<group>"; };
+		9226BEFF22A604FF0054FCD2 /* NumberFormatter+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Currency.swift"; sourceTree = "<group>"; };
 		9253C19922A34214005F6580 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		92B2FCD422A485E700653163 /* UIImageView+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Network.swift"; sourceTree = "<group>"; };
 		92B2FCD622A4868E00653163 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				92B2FCD422A485E700653163 /* UIImageView+Network.swift */,
+				9226BEFF22A604FF0054FCD2 /* NumberFormatter+Currency.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			children = (
 				92B2FCE522A4949600653163 /* BannerListNetworkWorker.swift */,
 				92B2FCEA22A4D3B900653163 /* CategoryListNetworkWorker.swift */,
+				9226BEFD22A5FCF50054FCD2 /* PopProductListNetworkWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -518,6 +524,8 @@
 				9222035822A30BA4003614DC /* Product.swift in Sources */,
 				92B2FCE822A4C99900653163 /* CustomTabBar.swift in Sources */,
 				92B2FCDF22A4868E00653163 /* HomeModels.swift in Sources */,
+				9226BEFE22A5FCF50054FCD2 /* PopProductListNetworkWorker.swift in Sources */,
+				9226BF0022A604FF0054FCD2 /* NumberFormatter+Currency.swift in Sources */,
 				92B2FCEB22A4D3BA00653163 /* CategoryListNetworkWorker.swift in Sources */,
 				9221D8AB22A4369800E7133A /* ProductReserve.swift in Sources */,
 				92B2FCD522A485E700653163 /* UIImageView+Network.swift in Sources */,

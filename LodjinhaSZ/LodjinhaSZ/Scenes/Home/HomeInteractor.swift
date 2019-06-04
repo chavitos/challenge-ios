@@ -16,6 +16,7 @@ protocol HomeBusinessLogic {
 	
 	func getBanners(request: Home.GetBannerList.Request)
 	func getCategories(request: Home.GetCategoryList.Request)
+	func getPopProducts(request: Home.GetPopProductList.Request)
 }
 
 protocol HomeDataStore {
@@ -25,10 +26,11 @@ protocol HomeDataStore {
 
 class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 	
-	var presenter		: HomePresentationLogic?
-	var worker			: HomeWorker?
-	let bannerWorker	: BannerListNetworkWorker = BannerListNetworkWorker()
-	let categoryWorker 	: CategoryListNetworkWorker = CategoryListNetworkWorker()
+	var presenter			: HomePresentationLogic?
+	var worker				: HomeWorker?
+	let bannerWorker		: BannerListNetworkWorker = BannerListNetworkWorker()
+	let categoryWorker 		: CategoryListNetworkWorker = CategoryListNetworkWorker()
+	let popProductsWorker	: PopProductListNetworkWorker = PopProductListNetworkWorker()
 	//var name: String = ""
 	
 	// MARK: Get Banners
@@ -69,6 +71,23 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 			
 			self.presenter?.presentCategories(response: response)
 		})
+	}
+	
+	func getPopProducts(request: Home.GetPopProductList.Request) {
 		
+		worker = HomeWorker(nil,nil, popProductsWorker)
+		worker?.getPopProducts(completion: { (popProducts, error) in
+			
+			let response:Home.GetPopProductList.Response
+			
+			if error == nil, let popProducts = popProducts {
+				
+				response = Home.GetPopProductList.Response(popProducts: popProducts, error: nil)
+			}else{
+				response = Home.GetPopProductList.Response(popProducts: nil, error: error)
+			}
+			
+			self.presenter?.presentPopProducts(response: response)
+		})
 	}
 }

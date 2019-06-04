@@ -15,6 +15,7 @@ import UIKit
 protocol HomePresentationLogic {
 	func presentBanners(response: Home.GetBannerList.Response)
 	func presentCategories(response: Home.GetCategoryList.Response)
+	func presentPopProducts(response: Home.GetPopProductList.Response)
 }
 
 class HomePresenter: HomePresentationLogic {
@@ -45,7 +46,8 @@ class HomePresenter: HomePresentationLogic {
 		
 		for banner in banners.data ?? [] {
 			
-			let viewModelBanner = BannerViewModel(bannerImageUrl: banner.imageUrl, bannerLink: banner.urlLink)
+			let viewModelBanner = BannerViewModel(bannerImageUrl: banner.imageUrl,
+												  bannerLink: banner.urlLink)
 			viewModelBanners.append(viewModelBanner)
 		}
 		
@@ -76,10 +78,57 @@ class HomePresenter: HomePresentationLogic {
 		
 		for category in categories.data ?? [] {
 			
-			let viewModelCategory = CategoryViewModel(id: category.id, desc: category.desc, categoryImageUrl: category.imageUrl)
+			let viewModelCategory = CategoryViewModel(id: category.id,
+													  desc: category.desc,
+													  categoryImageUrl: category.imageUrl)
 			viewModelCategories.append(viewModelCategory)
 		}
 		
 		return viewModelCategories
+	}
+	
+	// MARK: Get Pop Products
+	
+	func presentPopProducts(response: Home.GetPopProductList.Response) {
+		
+		var viewModel:Home.GetPopProductList.ViewModel
+		
+		if response.error == nil, let popProducts = response.popProducts {
+			
+			let popProductsViewModel = getViewModel(ofPopProducts: popProducts)
+			viewModel = Home.GetPopProductList.ViewModel(popProducts: popProductsViewModel, error: nil)
+		}else{
+			
+			viewModel = Home.GetPopProductList.ViewModel(popProducts: nil, error: response.error)
+		}
+		
+		viewController?.displayPopProducts(viewModel: viewModel)
+	}
+	
+	private func getViewModel(ofPopProducts popProducts:ProductList) -> [ProductViewModel] {
+		
+		var viewModelPopProducts:[ProductViewModel] = []
+		
+		for product in popProducts.data ?? [] {
+			
+			let currencyFormatter    = NumberFormatter().getCurrencyFormatter()
+			let originalPrice = currencyFormatter.string(from: NSNumber(value: product.originalPrice ?? 0.00))
+			let price = currencyFormatter.string(from: NSNumber(value: product.price ?? 0.00))
+			
+			let viewModelProduct = ProductViewModel(category: CategoryViewModel(id: product.category?.id,
+																				desc: product.category?.desc,
+																				categoryImageUrl: product.category?.imageUrl),
+													desc: product.desc,
+													id: product.id,
+													name: product.name,
+													originalPrice: originalPrice,
+													price: price,
+													imageUrl: product.imageUrl,
+													isPromotion: product.isPromotion)
+			
+			viewModelPopProducts.append(viewModelProduct)
+		}
+		
+		return viewModelPopProducts
 	}
 }

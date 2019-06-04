@@ -59,24 +59,38 @@ enum Home {
 		}
 		struct Response {
 			
-			
+			var popProducts:ProductList?
+			var error:Error?
 		}
 		struct ViewModel {
 			
-			
+			var popProducts:[ProductViewModel]?
+			var error:Error?
 		}
 	}
 }
 
 struct BannerViewModel {
 	
-	var bannerImageUrl	:String?
-	var bannerLink		:String?
+	let bannerImageUrl	:String?
+	let bannerLink		:String?
 }
 
 struct CategoryViewModel {
 	
-	var id					: Int?
-	var desc				: String?
-	var categoryImageUrl	: String?
+	let id					: Int?
+	let desc				: String?
+	let categoryImageUrl	: String?
+}
+
+struct ProductViewModel {
+	
+	let category		: CategoryViewModel?
+	let desc			: String?
+	let id				: Int?
+	let name			: String?
+	let originalPrice	: String?
+	let price			: String?
+	let imageUrl		: String?
+	let isPromotion		: Bool
 }

@@ -22,7 +22,12 @@ struct Product: Codable,CustomStringConvertible,Equatable {
 	
 	var isPromotion:Bool {
 		
-		return (originalPrice ?? -1)  == (price ?? -1)
+		if let originalPrice = originalPrice, let price = price {
+			
+			return originalPrice != price
+		}
+		
+		return false
 	}
 	
     enum CodingKeys:String,CodingKey{

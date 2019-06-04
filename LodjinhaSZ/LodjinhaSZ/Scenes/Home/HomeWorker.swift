@@ -16,11 +16,11 @@ class HomeWorker {
 	
 	var bannerWorker:BannerListWorkerProtocol?
 	var categoryWorker:CategoryListWorkerProtocol?
-	var mostPopProductWorker:Any?
+	var mostPopProductWorker:PopProductListWorkerProtocol?
 	
 	init(_ bannerWorker:BannerListWorkerProtocol?,
 		 _ categoryWorker:CategoryListWorkerProtocol?,
-		 _ mostPopProductWorker:Any?) {
+		 _ mostPopProductWorker:PopProductListWorkerProtocol?) {
 		
 		self.bannerWorker = bannerWorker
 		self.categoryWorker = categoryWorker
@@ -62,6 +62,24 @@ class HomeWorker {
 			completion(nil, WorkerErrors.workerNil)
 		}
 	}
+	
+	func getPopProducts(completion:@escaping(ProductList?,Error?) -> Void) {
+		
+		if let worker = mostPopProductWorker {
+			
+			worker.getPopProducts { (popProductList: () throws -> ProductList) in
+				
+				do{
+					let popProductList = try popProductList()
+					completion(popProductList,nil)
+				}catch let error {
+					completion(nil, WorkerErrors.networkProblem(error: error))
+				}
+			}
+		}else{
+			completion(nil,WorkerErrors.workerNil)
+		}
+	}
 }
 
 protocol BannerListWorkerProtocol {
@@ -70,6 +88,10 @@ protocol BannerListWorkerProtocol {
 
 protocol CategoryListWorkerProtocol {
 	func getCategories(completion:@escaping(() throws -> CategoryList) -> Void)
+}
+
+protocol PopProductListWorkerProtocol {
+	func getPopProducts(completion:@escaping(() throws -> ProductList) -> Void)
 }
 
 enum WorkerErrors:Error {

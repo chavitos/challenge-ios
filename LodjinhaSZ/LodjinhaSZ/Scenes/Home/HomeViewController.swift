@@ -15,6 +15,7 @@ import UIKit
 protocol HomeDisplayLogic: class {
 	func displayBanners(viewModel: Home.GetBannerList.ViewModel)
 	func displayCategories(viewModel: Home.GetCategoryList.ViewModel)
+	func displayPopProducts(viewModel: Home.GetPopProductList.ViewModel)
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic {
@@ -75,6 +76,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 		
 		getBanners()
 		getCategories()
+		getPopProducts()
 	}
 	
 	// MARK: GetBanners
@@ -89,7 +91,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	
 	func displayBanners(viewModel: Home.GetBannerList.ViewModel) {
 		
-
+		print("\(viewModel.banners?.count ?? 0) banners.")
 	}
 	
 	// MARK: Get Categories
@@ -102,6 +104,19 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	
 	func displayCategories(viewModel: Home.GetCategoryList.ViewModel) {
 		
+		print("\(viewModel.categories?.count ?? 0) categorias.")
+	}
+	
+	// MARK: Get Pop Products
+	
+	func getPopProducts() {
 		
+		let request = Home.GetPopProductList.Request()
+		interactor?.getPopProducts(request: request)
+	}
+	
+	func displayPopProducts(viewModel: Home.GetPopProductList.ViewModel) {
+		
+		print("\(viewModel.popProducts?.count ?? 0) produtos mais vendidos.")
 	}
 }
