@@ -9,5 +9,24 @@
 import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
-    
+	
+	@IBOutlet weak var categoryImageView: UIImageView!
+	@IBOutlet weak var categoryDescLabel: UILabel!
+	
+	override func prepareForReuse() {
+		
+		categoryImageView.image = nil
+		categoryDescLabel.text = ""
+	}
+	
+	func configCell(withCategory category:CategoryViewModel) {
+		
+		if let url = category.categoryImageUrl {
+			categoryImageView.setImage(withUrl: url)
+		}else{
+			categoryImageView.image = nil
+		}
+		
+		categoryDescLabel.text = category.desc ?? "-"
+	}
 }

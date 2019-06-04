@@ -101,6 +101,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	@IBOutlet weak var categoryCollection: UICollectionView!
 	
 	let categoryCellIdentifier = "categoryCell"
+	var categories:[CategoryViewModel] = []
 	
 	func getCategories() {
 		
@@ -110,7 +111,16 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	
 	func displayCategories(viewModel: Home.GetCategoryList.ViewModel) {
 		
-		print("\(viewModel.categories?.count ?? 0) categorias.")
+		if viewModel.error == nil, let categories = viewModel.categories {
+			self.categories = categories
+			
+			DispatchQueue.main.async {
+				self.categoryCollection.reloadData()
+			}
+		}else{
+			
+			#warning("Tratar erro com alert!")
+		}
 	}
 	
 	// MARK: Get Pop Products
@@ -118,6 +128,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	@IBOutlet weak var productTableView: UITableView!
 	
 	let productCellIdentifier = "productCell"
+	var popProducts:[ProductViewModel] = []
 	
 	func getPopProducts() {
 		
@@ -127,7 +138,16 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	
 	func displayPopProducts(viewModel: Home.GetPopProductList.ViewModel) {
 		
-		print("\(viewModel.popProducts?.count ?? 0) produtos mais vendidos.")
+		if viewModel.error == nil, let popProducts = viewModel.popProducts {
+			self.popProducts = popProducts
+			
+			DispatchQueue.main.async {
+				self.productTableView.reloadData()
+			}
+		}else{
+			
+			#warning("Tratar erro com alert!")
+		}
 	}
 }
 
@@ -144,10 +164,19 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		
-		return 0
+		return popProducts.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		
+		let product = popProducts[indexPath.row]
+		
+		if let cell = tableView.dequeueReusableCell(withIdentifier: productCellIdentifier, for: indexPath) as? ProductTableViewCell {
+			
+			cell.configCell(withProduct: product)
+			
+			return cell
+		}
 		
 		return UITableViewCell()
 	}
@@ -158,14 +187,31 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource {
 	}
 }
 
-extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		
-		return 0
+		return categories.count
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		
+		let height = collectionView.frame.size.height - 16
+		let width = (height / 5.0) * 4
+		
+		return CGSize(width: width, height: height)
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		
+		let category = categories[indexPath.row]
+		
+		if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: categoryCellIdentifier, for: indexPath) as? CategoryCollectionViewCell {
+			
+			cell.configCell(withCategory: category)
+			
+			return cell
+		}
 		
 		return UICollectionViewCell()
 	}
