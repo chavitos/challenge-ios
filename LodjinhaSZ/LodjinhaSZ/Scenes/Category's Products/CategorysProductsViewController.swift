@@ -71,6 +71,8 @@ class CategorysProductsViewController: UIViewController, CategorysProductsDispla
 		
 		super.viewDidLoad()
 		
+		self.title = self.categoryName
+		
 		getCategorysProducts()
 	}
 	
@@ -84,30 +86,38 @@ class CategorysProductsViewController: UIViewController, CategorysProductsDispla
 	// MARK: Get Category's Products
 	
 	@IBOutlet weak var productsTableView: UITableView!
+	@IBOutlet weak var getCategorysProductsActivityIndicator: UIActivityIndicatorView!
 	
+	var categoryName:String?
 	var offset	: Int = 0
-	var limit	: Int = 20
 	var total	: Int = 0
+	let limit	: Int = 20
 	
 	let productCellIdentifier = "productCell"
 	var products:[ProductViewModel] = []
 	
 	func getCategorysProducts() {
 		
-		let request = CategorysProducts.getCategorysProducts.Request(offset: 0, limit: 0)
+		getCategorysProductsActivityIndicator.startAnimating()
+		let request = CategorysProducts.getCategorysProducts.Request(offset: self.offset, limit: self.limit)
 		interactor?.getCategorysProducts(request: request)
 	}
 	
 	func displayProducts(viewModel: CategorysProducts.getCategorysProducts.ViewModel) {
 		
-		if viewModel.error == nil, let products = viewModel.products {
+		getCategorysProductsActivityIndicator.stopAnimating()
+		
+		if viewModel.error == nil {
 			
-			self.offset += self.limit
+			if let products = viewModel.products, let offset = viewModel.offset, let total = viewModel.total {
 			
-			self.products = products
-			
-			DispatchQueue.main.async {
-				self.productsTableView.reloadData()
+				self.offset = offset + self.limit
+				self.products += products
+				self.total = total
+				
+				DispatchQueue.main.async {
+					self.productsTableView.reloadData()
+				}
 			}
 		}else{
 			
@@ -151,9 +161,10 @@ extension CategorysProductsViewController: UITableViewDelegate, UITableViewDataS
 		
 		if indexPath.row == products.count - 1 {
 			
-//			if nextPage > 0 {
-//				getUpcomingMovies(forPage:nextPage)
-//			}
+			if offset < total {
+				
+				getCategorysProducts()
+			}
 		}
 	}
 }

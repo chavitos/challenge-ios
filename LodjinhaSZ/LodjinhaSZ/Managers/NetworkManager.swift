@@ -87,7 +87,7 @@ public enum LodjinhaSZRequests: URLRequestConvertible {
 
 class NetworkManager {
     
-    func request(withURL url:URLRequestConvertible, callback:@escaping (Data?,DataResponse<Any>?,Error?)->Void) {
+    static func request(withURL url:URLRequestConvertible, callback:@escaping (Data?,DataResponse<Any>?,Error?)->Void) {
         
         Alamofire.request(url).validate().responseJSON { response in
             

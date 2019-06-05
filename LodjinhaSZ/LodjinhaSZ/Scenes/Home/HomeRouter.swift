@@ -33,6 +33,7 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
 		if let segue = segue {
 			
 			let destinationVC = segue.destination as! CategorysProductsViewController
+			destinationVC.categoryName = dataStore?.category?.desc ?? "Produtos por categoria"
 			var destinationDS = destinationVC.router!.dataStore!
 			passDataToCategorysProducts(source: dataStore!, destination: &destinationDS)
 		}

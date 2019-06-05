@@ -14,7 +14,7 @@ class CategoryListNetworkWorker:CategoryListWorkerProtocol {
 		
 		let request = LodjinhaSZRequests.getCategories
 		
-		NetworkManager().request(withURL: request) { (data,response,error) in
+		NetworkManager.request(withURL: request) { (data,response,error) in
 			
 			if error == nil, let data = data {
 				

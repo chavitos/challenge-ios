@@ -19,7 +19,7 @@ class ProductTableViewCell: UITableViewCell {
 	
 	override func prepareForReuse() {
 		
-		productImageView.image = nil
+		productImageView.image = UIImage()
 		productNameLabel.text = ""
 		originalPriceLabel.text = ""
 		priceLabel.text = ""
@@ -33,7 +33,7 @@ class ProductTableViewCell: UITableViewCell {
 		if let url = product.imageUrl {
 			productImageView.setImage(withUrl: url)
 		}else{
-			productImageView.image = nil
+			productImageView.image = UIImage()
 		}
 		
 		productNameLabel.attributedText = "\(product.name ?? "Produto:") \(product.desc ?? "-")".htmlToAttributedString

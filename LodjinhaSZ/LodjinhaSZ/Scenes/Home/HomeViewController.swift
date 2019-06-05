@@ -276,7 +276,7 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
 		
 		let category = self.categories[indexPath.row]
 		
-		let request = Home.ShowNextScreen.Request(nextScreen: .categorysProducts, dataToStore: category)
+		let request = Home.ShowNextScreen.Request(nextScreen: .categorysProducts(category: category))
 		self.interactor?.storeDataToNextScreen(request: request)
 	}
 }

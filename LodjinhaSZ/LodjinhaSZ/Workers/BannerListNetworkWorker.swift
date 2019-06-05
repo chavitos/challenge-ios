@@ -14,7 +14,7 @@ class BannerListNetworkWorker:BannerListWorkerProtocol {
 		
 		let request = LodjinhaSZRequests.getBanners
 		
-		NetworkManager().request(withURL: request) { (data,response,error) in
+		NetworkManager.request(withURL: request) { (data,response,error) in
 			
 			if error == nil, let data = data {
 				

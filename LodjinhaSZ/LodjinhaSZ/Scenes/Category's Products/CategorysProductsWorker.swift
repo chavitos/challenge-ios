@@ -14,7 +14,27 @@ import UIKit
 
 class CategorysProductsWorker {
 	
-	func doSomeWork() {
+	var categorysProductsWorker:CategorysProductsWorkerProtocol
+	
+	init(_ categorysProductsWorker:CategorysProductsWorkerProtocol) {
 		
+		self.categorysProductsWorker = categorysProductsWorker
 	}
+	
+	func getProducts(ofCategory categoryId:Int, withOffset offset:Int, andLimit limit:Int, completion:@escaping(ProductList?,Error?) -> Void) {
+	
+		categorysProductsWorker.getProducts(ofCategory: categoryId, withOffset: offset, andLimit: limit) { (categorysProducts: () throws -> ProductList) in
+		
+			do{
+				let categorysProducts = try categorysProducts()
+				completion(categorysProducts,nil)
+			}catch let error{
+				completion(nil, WorkerErrors.networkProblem(error: error))
+			}
+		}
+	}
+}
+
+protocol CategorysProductsWorkerProtocol {
+	func getProducts(ofCategory categoryId:Int, withOffset offset:Int, andLimit limit:Int, completion:@escaping(() throws -> ProductList) -> Void)
 }

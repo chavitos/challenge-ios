@@ -74,7 +74,6 @@ enum Home {
 		struct Request {
 			
 			var nextScreen:NextScreen
-			var dataToStore:NextScreenData
 		}
 		
 		struct Response {
@@ -89,22 +88,20 @@ enum Home {
 	}
 }
 
-protocol NextScreenData { }
-
 struct BannerViewModel {
 	
 	let bannerImageUrl	:String?
 	let bannerLink		:String?
 }
 
-struct CategoryViewModel:NextScreenData {
+struct CategoryViewModel {
 	
 	let id					: Int?
 	let desc				: String?
 	let categoryImageUrl	: String?
 }
 
-struct ProductViewModel:NextScreenData {
+struct ProductViewModel {
 	
 	let category		: CategoryViewModel?
 	let desc			: String?

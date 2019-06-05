@@ -25,6 +25,7 @@ class CategorysProductsInteractor: CategorysProductsBusinessLogic, CategorysProd
 	
 	var presenter	: CategorysProductsPresentationLogic?
 	var worker		: CategorysProductsWorker?
+	var categorysProductsWorker: CategorysProductsWorkerProtocol = CategorysProductsNetworkWorker()
 	
 	var category	: CategoryViewModel?
 	var product		: ProductViewModel?
@@ -33,10 +34,18 @@ class CategorysProductsInteractor: CategorysProductsBusinessLogic, CategorysProd
 	
 	func getCategorysProducts(request: CategorysProducts.getCategorysProducts.Request) {
 		
-		worker = CategorysProductsWorker()
-		worker?.doSomeWork()
-		
-		let response = CategorysProducts.getCategorysProducts.Response(products: nil, error: nil)
-		presenter?.presentCategorysProducts(response: response)
+		worker = CategorysProductsWorker(categorysProductsWorker)
+		worker?.getProducts(ofCategory: self.category?.id ?? -1, withOffset: request.offset, andLimit: request.limit, completion: { (productList, error) in
+			
+			let response:CategorysProducts.getCategorysProducts.Response
+			
+			if error == nil {
+				response = CategorysProducts.getCategorysProducts.Response(products: productList, error: nil)
+			}else{
+				response = CategorysProducts.getCategorysProducts.Response(products: nil, error: error)
+			}
+			
+			self.presenter?.presentCategorysProducts(response: response)
+		})
 	}
 }

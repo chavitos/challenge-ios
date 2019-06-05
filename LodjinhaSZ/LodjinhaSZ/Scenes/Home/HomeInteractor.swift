@@ -47,7 +47,7 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 			
 			let response:Home.GetBannerList.Response
 			
-			if error == nil, let banners = banners {
+			if error == nil {
 				
 				response = Home.GetBannerList.Response(banners: banners,error: nil)
 			}else {
@@ -68,7 +68,7 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 			
 			let response:Home.GetCategoryList.Response
 			
-			if error == nil, let categories = categories {
+			if error == nil {
 				
 				response = Home.GetCategoryList.Response(categories: categories,error: nil)
 			}else {
@@ -89,7 +89,7 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 			
 			let response:Home.GetPopProductList.Response
 			
-			if error == nil, let popProducts = popProducts {
+			if error == nil {
 				
 				response = Home.GetPopProductList.Response(popProducts: popProducts, error: nil)
 			}else{
@@ -105,14 +105,10 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 	func storeDataToNextScreen(request: Home.ShowNextScreen.Request) {
 		
 		switch request.nextScreen {
-		case .categorysProducts:
-			if let category = request.dataToStore as? CategoryViewModel {
+		case .categorysProducts(let category):
 				self.category = category
-			}
-		case .productDetail:
-			if let product = request.dataToStore as? ProductViewModel {
+		case .productDetail(let product):
 				self.popProduct = product
-			}
 		}
 		
 		self.presenter?.presentNextScreen(response: Home.ShowNextScreen.Response(nextScreen: request.nextScreen))
