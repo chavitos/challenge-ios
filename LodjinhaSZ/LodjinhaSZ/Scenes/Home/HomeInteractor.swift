@@ -17,21 +17,26 @@ protocol HomeBusinessLogic {
 	func getBanners(request: Home.GetBannerList.Request)
 	func getCategories(request: Home.GetCategoryList.Request)
 	func getPopProducts(request: Home.GetPopProductList.Request)
+	func storeDataToNextScreen(request: Home.ShowNextScreen.Request)
 }
 
 protocol HomeDataStore {
 	
-	//var name: String { get set }
+	var category:CategoryViewModel? { get set }
+	var popProduct:ProductViewModel? { get set }
 }
 
 class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 	
 	var presenter			: HomePresentationLogic?
+	
 	var worker				: HomeWorker?
 	let bannerWorker		: BannerListNetworkWorker = BannerListNetworkWorker()
 	let categoryWorker 		: CategoryListNetworkWorker = CategoryListNetworkWorker()
 	let popProductsWorker	: PopProductListNetworkWorker = PopProductListNetworkWorker()
-	//var name: String = ""
+	
+	var category: CategoryViewModel?
+	var popProduct: ProductViewModel?
 	
 	// MARK: Get Banners
 	
@@ -54,6 +59,8 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 		})
 	}
 	
+	// MARK: Get Categories
+	
 	func getCategories(request: Home.GetCategoryList.Request) {
 		
 		worker = HomeWorker(nil, categoryWorker, nil)
@@ -73,6 +80,8 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 		})
 	}
 	
+	// MARK: Get Pop Products
+	
 	func getPopProducts(request: Home.GetPopProductList.Request) {
 		
 		worker = HomeWorker(nil,nil, popProductsWorker)
@@ -89,5 +98,23 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 			
 			self.presenter?.presentPopProducts(response: response)
 		})
+	}
+	
+	// MARK: Show next screen (see NextScreen Enum to know the options)
+	
+	func storeDataToNextScreen(request: Home.ShowNextScreen.Request) {
+		
+		switch request.nextScreen {
+		case .categorysProducts:
+			if let category = request.dataToStore as? CategoryViewModel {
+				self.category = category
+			}
+		case .productDetail:
+			if let product = request.dataToStore as? ProductViewModel {
+				self.popProduct = product
+			}
+		}
+		
+		self.presenter?.presentNextScreen(response: Home.ShowNextScreen.Response(nextScreen: request.nextScreen))
 	}
 }

@@ -68,7 +68,28 @@ enum Home {
 			var error:Error?
 		}
 	}
+	
+	enum ShowNextScreen {
+		
+		struct Request {
+			
+			var nextScreen:NextScreen
+			var dataToStore:NextScreenData
+		}
+		
+		struct Response {
+			
+			var nextScreen:NextScreen
+		}
+		
+		struct ViewModel {
+			
+			var nextScreen:NextScreen
+		}
+	}
 }
+
+protocol NextScreenData { }
 
 struct BannerViewModel {
 	
@@ -76,14 +97,14 @@ struct BannerViewModel {
 	let bannerLink		:String?
 }
 
-struct CategoryViewModel {
+struct CategoryViewModel:NextScreenData {
 	
 	let id					: Int?
 	let desc				: String?
 	let categoryImageUrl	: String?
 }
 
-struct ProductViewModel {
+struct ProductViewModel:NextScreenData {
 	
 	let category		: CategoryViewModel?
 	let desc			: String?

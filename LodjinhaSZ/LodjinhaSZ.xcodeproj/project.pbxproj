@@ -42,6 +42,7 @@
 		92BCC92D22A1FB42009FFDDF /* Pacifico-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BCC92A22A1FB42009FFDDF /* Pacifico-Bold.ttf */; };
 		92BCC92E22A1FB42009FFDDF /* Pacifico-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BCC92B22A1FB42009FFDDF /* Pacifico-Light.ttf */; };
 		92BCC92F22A1FB42009FFDDF /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BCC92C22A1FB42009FFDDF /* Pacifico-Regular.ttf */; };
+		92E6A00922A8346100B93826 /* EmptyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E6A00822A8346100B93826 /* EmptyLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		92BCC92A22A1FB42009FFDDF /* Pacifico-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Bold.ttf"; sourceTree = "<group>"; };
 		92BCC92B22A1FB42009FFDDF /* Pacifico-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Light.ttf"; sourceTree = "<group>"; };
 		92BCC92C22A1FB42009FFDDF /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		92E6A00822A8346100B93826 /* EmptyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyLabel.swift; sourceTree = "<group>"; };
 		93754E1E2FB218EF8C4E7547 /* Pods-LodjinhaSZ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaSZ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LodjinhaSZ/Pods-LodjinhaSZ.debug.xcconfig"; sourceTree = "<group>"; };
 		9A80FEE267616F2F908298CB /* Pods-LodjinhaSZTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LodjinhaSZTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LodjinhaSZTests/Pods-LodjinhaSZTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,6 +250,7 @@
 			children = (
 				92B2FCE722A4C99900653163 /* CustomTabBar.swift */,
 				9226BF0A22A62AE00054FCD2 /* BannerScrollView.swift */,
+				92E6A00822A8346100B93826 /* EmptyLabel.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				92B2FCE622A4949600653163 /* BannerListNetworkWorker.swift in Sources */,
 				9226BF0722A6258F0054FCD2 /* CategoryCollectionViewCell.swift in Sources */,
 				92B2FCE122A4868E00653163 /* HomeInteractor.swift in Sources */,
+				92E6A00922A8346100B93826 /* EmptyLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

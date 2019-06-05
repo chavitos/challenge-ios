@@ -16,6 +16,7 @@ protocol HomeDisplayLogic: class {
 	func displayBanners(viewModel: Home.GetBannerList.ViewModel)
 	func displayCategories(viewModel: Home.GetCategoryList.ViewModel)
 	func displayPopProducts(viewModel: Home.GetPopProductList.ViewModel)
+	func displayNextScreen(viewModel: Home.ShowNextScreen.ViewModel)
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic {
@@ -83,8 +84,11 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	
 	@IBOutlet weak var bannerPageControl: UIPageControl!
 	@IBOutlet weak var bannerScrollView: BannerScrollView!
+	@IBOutlet weak var getBannersActivityIndicator: UIActivityIndicatorView!
 	
 	func getBanners() {
+		
+		getBannersActivityIndicator.startAnimating()
 		
 		let request = Home.GetBannerList.Request()
 		interactor?.getBanners(request: request)
@@ -92,24 +96,41 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	
 	func displayBanners(viewModel: Home.GetBannerList.ViewModel) {
 		
-		bannerPageControl.numberOfPages = viewModel.banners?.count ?? 0
-		bannerScrollView.configBanners(viewModel.banners ?? [])
+		getBannersActivityIndicator.stopAnimating()
+		
+		if viewModel.error == nil, let banners = viewModel.banners {
+		
+			bannerPageControl.numberOfPages = banners.count
+			bannerScrollView.configBanners(banners)
+		}else{
+
+			let emptyLabel = EmptyLabel(withView: bannerScrollView, andMessage: "Não foi possível recuperar os banners x_X")
+			
+			DispatchQueue.main.async {
+				self.bannerScrollView.addSubview(emptyLabel)
+			}
+		}
 	}
 	
 	// MARK: Get Categories
 	
 	@IBOutlet weak var categoryCollection: UICollectionView!
+	@IBOutlet weak var getCategoriesActivityIndicator: UIActivityIndicatorView!
 	
 	let categoryCellIdentifier = "categoryCell"
 	var categories:[CategoryViewModel] = []
 	
 	func getCategories() {
 		
+		getCategoriesActivityIndicator.startAnimating()
+		
 		let request = Home.GetCategoryList.Request()
 		interactor?.getCategories(request: request)
 	}
 	
 	func displayCategories(viewModel: Home.GetCategoryList.ViewModel) {
+		
+		getCategoriesActivityIndicator.stopAnimating()
 		
 		if viewModel.error == nil, let categories = viewModel.categories {
 			self.categories = categories
@@ -119,24 +140,33 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 			}
 		}else{
 			
-			#warning("Tratar erro com alert!")
+			let emptyLabel = EmptyLabel(withView: categoryCollection, andMessage: "Não foi possível recuperar as categorias :'(")
+			
+			DispatchQueue.main.async {
+				self.categoryCollection.backgroundView  = emptyLabel
+			}
 		}
 	}
 	
 	// MARK: Get Pop Products
 	
 	@IBOutlet weak var productTableView: UITableView!
+	@IBOutlet weak var getPopProductsActivityIndicator: UIActivityIndicatorView!
 	
 	let productCellIdentifier = "productCell"
 	var popProducts:[ProductViewModel] = []
 	
 	func getPopProducts() {
 		
+		getPopProductsActivityIndicator.startAnimating()
+		
 		let request = Home.GetPopProductList.Request()
 		interactor?.getPopProducts(request: request)
 	}
 	
 	func displayPopProducts(viewModel: Home.GetPopProductList.ViewModel) {
+		
+		getPopProductsActivityIndicator.stopAnimating()
 		
 		if viewModel.error == nil, let popProducts = viewModel.popProducts {
 			self.popProducts = popProducts
@@ -146,8 +176,18 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 			}
 		}else{
 			
-			#warning("Tratar erro com alert!")
+			let emptyLabel = EmptyLabel(withView: productTableView, andMessage: "Não foi possível recuperar os produtos mais vendidos :'(")
+			
+			DispatchQueue.main.async {
+				self.productTableView.backgroundView  = emptyLabel
+				self.productTableView.separatorStyle  = .none
+			}
 		}
+	}
+	
+	func displayNextScreen(viewModel: Home.ShowNextScreen.ViewModel) {
+		
+		
 	}
 }
 

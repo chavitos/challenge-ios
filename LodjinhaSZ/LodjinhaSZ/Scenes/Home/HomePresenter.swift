@@ -12,10 +12,17 @@
 
 import UIKit
 
+enum NextScreen {
+	
+	case productDetail
+	case categorysProducts
+}
+
 protocol HomePresentationLogic {
 	func presentBanners(response: Home.GetBannerList.Response)
 	func presentCategories(response: Home.GetCategoryList.Response)
 	func presentPopProducts(response: Home.GetPopProductList.Response)
+	func presentNextScreen(response: Home.ShowNextScreen.Response)
 }
 
 class HomePresenter: HomePresentationLogic {
@@ -130,5 +137,12 @@ class HomePresenter: HomePresentationLogic {
 		}
 		
 		return viewModelPopProducts
+	}
+	
+	// MARK: Present Next Screen (see enum NextScreen to knwo the options)
+	
+	func presentNextScreen(response: Home.ShowNextScreen.Response) {
+		
+		viewController?.displayNextScreen(viewModel: Home.ShowNextScreen.ViewModel(nextScreen: response.nextScreen))
 	}
 }
