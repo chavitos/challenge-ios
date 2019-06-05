@@ -22,8 +22,8 @@ protocol HomeBusinessLogic {
 
 protocol HomeDataStore {
 	
-	var category:CategoryViewModel? { get set }
-	var popProduct:ProductViewModel? { get set }
+	var category	: CategoryViewModel? { get set }
+	var popProduct	: ProductViewModel? { get set }
 }
 
 class HomeInteractor: HomeBusinessLogic, HomeDataStore {
@@ -35,8 +35,8 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 	let categoryWorker 		: CategoryListNetworkWorker = CategoryListNetworkWorker()
 	let popProductsWorker	: PopProductListNetworkWorker = PopProductListNetworkWorker()
 	
-	var category: CategoryViewModel?
-	var popProduct: ProductViewModel?
+	var category	: CategoryViewModel?
+	var popProduct	: ProductViewModel?
 	
 	// MARK: Get Banners
 	

@@ -12,49 +12,63 @@
 
 import UIKit
 
-@objc protocol HomeRoutingLogic
-{
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+@objc protocol HomeRoutingLogic {
+	func routeToCategorysProducts(segue: UIStoryboardSegue?)
+//	func routeToProductDetail(segue: UIStoryboardSegue?)
 }
 
-protocol HomeDataPassing
-{
-  var dataStore: HomeDataStore? { get }
+protocol HomeDataPassing {
+	var dataStore: HomeDataStore? { get }
 }
 
-class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing
-{
-  weak var viewController: HomeViewController?
-  var dataStore: HomeDataStore?
-  
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
-
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: HomeViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: HomeDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
+	
+	weak var viewController: HomeViewController?
+	var dataStore: HomeDataStore?
+	
+	// MARK: Routing
+	
+	func routeToCategorysProducts(segue: UIStoryboardSegue?) {
+		
+		if let segue = segue {
+			
+			let destinationVC = segue.destination as! CategorysProductsViewController
+			var destinationDS = destinationVC.router!.dataStore!
+			passDataToCategorysProducts(source: dataStore!, destination: &destinationDS)
+		}
+	}
+	
+//	func routeToProductDetail(segue: UIStoryboardSegue?) {
+//
+//		if let segue = segue {
+//
+//			let destinationVC = segue.destination as! ProductDetailViewController
+//			var destinationDS = destinationVC.router!.dataStore!
+//			passDataToProductDetail(source: dataStore!, destination: &destinationDS)
+//		}
+//	}
+	
+	// MARK: Navigation
+	
+	func navigateToCategorysProducts(source: HomeViewController, destination: CategorysProductsViewController) {
+		
+		source.show(destination, sender: nil)
+	}
+	
+//	func navigateToProductDetail(source: HomeViewController, destination: ProductDetailViewController) {
+//
+//		source.show(destination, sender: nil)
+//	}
+	
+	// MARK: Passing data
+	
+	func passDataToCategorysProducts(source: HomeDataStore, destination: inout CategorysProductsDataStore) {
+		
+		destination.category = source.category
+	}
+	
+//	func passDataToProductDetail(source: HomeDataStore, destination: inout ProductDetailDataStore) {
+//
+//		destination.product = source.popProduct
+//	}
 }

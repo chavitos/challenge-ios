@@ -46,6 +46,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 		let interactor = HomeInteractor()
 		let presenter = HomePresenter()
 		let router = HomeRouter()
+		
 		viewController.interactor = interactor
 		viewController.router = router
 		interactor.presenter = presenter
@@ -59,7 +60,9 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		
 		if let scene = segue.identifier {
+			
 			let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+			
 			if let router = router, router.responds(to: selector) {
 				router.perform(selector, with: segue)
 			}
@@ -78,6 +81,13 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 		getBanners()
 		getCategories()
 		getPopProducts()
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		
+		super.viewWillAppear(animated)
+		
+		self.tabBarController?.tabBar.isHidden = false
 	}
 	
 	// MARK: GetBanners
@@ -187,7 +197,12 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	
 	func displayNextScreen(viewModel: Home.ShowNextScreen.ViewModel) {
 		
-		
+		switch viewModel.nextScreen {
+		case .categorysProducts:
+			self.performSegue(withIdentifier: "CategorysProducts", sender: nil)
+		case .productDetail:
+			self.performSegue(withIdentifier: "ProductDetail", sender: nil)
+		}
 	}
 }
 
@@ -223,7 +238,8 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
-		
+		let cell = tableView.cellForRow(at: indexPath)
+		cell?.isSelected = false
 	}
 }
 
@@ -254,5 +270,13 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
 		}
 		
 		return UICollectionViewCell()
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		
+		let category = self.categories[indexPath.row]
+		
+		let request = Home.ShowNextScreen.Request(nextScreen: .categorysProducts, dataToStore: category)
+		self.interactor?.storeDataToNextScreen(request: request)
 	}
 }
