@@ -391,47 +391,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7yd-vT-Yjm">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                <rect key="frame" x="0.0" y="8" width="375" height="171"/>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="171" id="O58-sB-1me"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desenvolvimento de Jogos Para Android" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="1PJ-KB-oVv">
-                                <rect key="frame" x="10" y="179" width="355" height="21.5"/>
+                                <rect key="frame" x="10" y="187" width="355" height="21.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21.5" id="Kll-me-mpI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGK-7d-msv">
-                                <rect key="frame" x="0.0" y="211" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="219" width="375" height="1"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.80000000000000004" id="dhA-z9-HQ8"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="De R$ 10.999,99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjr-W3-eX6">
-                                <rect key="frame" x="10" y="224.5" width="108.5" height="17"/>
+                                <rect key="frame" x="10" y="232.5" width="108.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVi-vd-nWM">
+                                <rect key="frame" x="10" y="240.5" width="108.5" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="jlh-3G-ngv"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por R$ 9.999,99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWH-7v-DTY">
-                                <rect key="frame" x="215.5" y="221.5" width="149.5" height="23"/>
+                                <rect key="frame" x="215.5" y="229.5" width="149.5" height="23"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" red="0.94509803920000002" green="0.31372549020000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdn-Hy-31k">
-                                <rect key="frame" x="0.0" y="254.5" width="375" height="0.5"/>
+                                <rect key="frame" x="0.0" y="262.5" width="375" height="0.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.80000000000000004" id="pks-Js-1Rg"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVe-Zh-cVg">
+                                <rect key="frame" x="10" y="273" width="355" height="195.5"/>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyb-vt-GDt">
                                 <rect key="frame" x="0.0" y="478.5" width="375" height="1"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -454,14 +469,10 @@
                                         <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="reserveProduct:" destination="3Ae-AL-Neu" eventType="touchUpInside" id="irI-K5-ngJ"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RVe-Zh-cVg">
-                                <rect key="frame" x="10" y="265" width="355" height="203.5"/>
-                                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -473,6 +484,7 @@
                             <constraint firstAttribute="trailing" secondItem="tGK-7d-msv" secondAttribute="trailing" id="8zx-eP-YUb"/>
                             <constraint firstItem="sdn-Hy-31k" firstAttribute="top" secondItem="HWH-7v-DTY" secondAttribute="bottom" constant="10" id="9HK-za-mHU"/>
                             <constraint firstItem="Iim-9o-Gtx" firstAttribute="trailing" secondItem="RVe-Zh-cVg" secondAttribute="trailing" constant="10" id="BXN-7K-xKe"/>
+                            <constraint firstItem="KVi-vd-nWM" firstAttribute="centerX" secondItem="Gjr-W3-eX6" secondAttribute="centerX" id="GQK-Ou-vrp"/>
                             <constraint firstItem="Iim-9o-Gtx" firstAttribute="trailing" secondItem="o74-fa-KWF" secondAttribute="trailing" constant="10" id="GcM-np-nlM"/>
                             <constraint firstItem="1PJ-KB-oVv" firstAttribute="leading" secondItem="Iim-9o-Gtx" secondAttribute="leading" constant="10" id="J68-33-CB3"/>
                             <constraint firstItem="kyb-vt-GDt" firstAttribute="top" secondItem="RVe-Zh-cVg" secondAttribute="bottom" constant="10" id="KbD-Pg-Z3i"/>
@@ -480,21 +492,33 @@
                             <constraint firstItem="Gjr-W3-eX6" firstAttribute="leading" secondItem="Iim-9o-Gtx" secondAttribute="leading" constant="10" id="PMN-PB-Kkl"/>
                             <constraint firstItem="7yd-vT-Yjm" firstAttribute="trailing" secondItem="Iim-9o-Gtx" secondAttribute="trailing" id="Rvh-6B-bq1"/>
                             <constraint firstItem="7yd-vT-Yjm" firstAttribute="leading" secondItem="Iim-9o-Gtx" secondAttribute="leading" id="Stl-2r-ZzP"/>
+                            <constraint firstItem="KVi-vd-nWM" firstAttribute="trailing" secondItem="Gjr-W3-eX6" secondAttribute="trailing" id="U8k-mZ-Ijg"/>
                             <constraint firstItem="o74-fa-KWF" firstAttribute="top" secondItem="kyb-vt-GDt" secondAttribute="bottom" constant="10.5" id="b17-WP-Glw"/>
                             <constraint firstItem="1PJ-KB-oVv" firstAttribute="top" secondItem="7yd-vT-Yjm" secondAttribute="bottom" constant="8" id="cnQ-j1-j95"/>
+                            <constraint firstItem="KVi-vd-nWM" firstAttribute="leading" secondItem="Gjr-W3-eX6" secondAttribute="leading" id="fnY-LX-RXa"/>
                             <constraint firstItem="tGK-7d-msv" firstAttribute="top" secondItem="1PJ-KB-oVv" secondAttribute="bottom" constant="10.5" id="fqg-jN-Ozh"/>
                             <constraint firstItem="RVe-Zh-cVg" firstAttribute="leading" secondItem="Iim-9o-Gtx" secondAttribute="leading" constant="10" id="i07-Y8-c3h"/>
                             <constraint firstItem="o74-fa-KWF" firstAttribute="leading" secondItem="Iim-9o-Gtx" secondAttribute="leading" constant="10" id="j1J-r7-2eY"/>
                             <constraint firstItem="tGK-7d-msv" firstAttribute="leading" secondItem="EMj-DJ-IJk" secondAttribute="leading" id="k3T-AX-Brl"/>
+                            <constraint firstItem="KVi-vd-nWM" firstAttribute="centerY" secondItem="Gjr-W3-eX6" secondAttribute="centerY" id="nTV-kv-gIc"/>
                             <constraint firstItem="Iim-9o-Gtx" firstAttribute="trailing" secondItem="1PJ-KB-oVv" secondAttribute="trailing" constant="10" id="pmZ-Ne-2Y4"/>
                             <constraint firstItem="Iim-9o-Gtx" firstAttribute="trailing" secondItem="HWH-7v-DTY" secondAttribute="trailing" constant="10" id="pot-iB-Ken"/>
                             <constraint firstItem="HWH-7v-DTY" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Gjr-W3-eX6" secondAttribute="trailing" constant="100" id="r5d-gC-gy8"/>
-                            <constraint firstItem="7yd-vT-Yjm" firstAttribute="top" secondItem="Iim-9o-Gtx" secondAttribute="top" id="rYE-Dy-Coi"/>
+                            <constraint firstItem="7yd-vT-Yjm" firstAttribute="top" secondItem="Iim-9o-Gtx" secondAttribute="top" constant="8" id="rYE-Dy-Coi"/>
                             <constraint firstAttribute="trailing" secondItem="sdn-Hy-31k" secondAttribute="trailing" id="sC1-R3-DQC"/>
                             <constraint firstItem="Iim-9o-Gtx" firstAttribute="bottom" secondItem="o74-fa-KWF" secondAttribute="bottom" constant="10" id="xaF-w0-hhN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Iim-9o-Gtx"/>
                     </view>
+                    <connections>
+                        <outlet property="originalPriceLabel" destination="Gjr-W3-eX6" id="d0M-xf-MVL"/>
+                        <outlet property="priceLabel" destination="HWH-7v-DTY" id="kvd-qp-Qzo"/>
+                        <outlet property="priceView" destination="KVi-vd-nWM" id="6Oe-iF-YnO"/>
+                        <outlet property="productDescTextView" destination="RVe-Zh-cVg" id="D3P-HU-RHp"/>
+                        <outlet property="productImageView" destination="7yd-vT-Yjm" id="1SO-Jz-ovB"/>
+                        <outlet property="productNameLabel" destination="1PJ-KB-oVv" id="dhx-0s-3bf"/>
+                        <outlet property="reserveProductButton" destination="o74-fa-KWF" id="FhA-OS-eIm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ja4-wi-Ax1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

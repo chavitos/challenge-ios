@@ -13,7 +13,8 @@
 import UIKit
 
 protocol ProductDetailDisplayLogic: class {
-	func displayProductDetail(viewModel: ProductDetail.ProductDetail.ViewModel)
+	func displayProductDetail(viewModel: ProductDetail.ShowProductDetail.ViewModel)
+	func displayReserveMessage(viewModel: ProductDetail.ReserveProduct.ViewModel)
 }
 
 class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic {
@@ -74,18 +75,72 @@ class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic {
 		getProduct()
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		
+		super.viewWillAppear(animated)
+		
+		self.tabBarController?.tabBar.isHidden = true
+	}
+	
 	// MARK: Get Product
 	
-	
+	@IBOutlet weak var productImageView: UIImageView!
+	@IBOutlet weak var productNameLabel: UILabel!
+	@IBOutlet weak var originalPriceLabel: UILabel!
+	@IBOutlet weak var priceLabel: UILabel!
+	@IBOutlet weak var productDescTextView: UITextView!
+	@IBOutlet weak var priceView: UIView!
 	
 	func getProduct() {
 		
-		let request = ProductDetail.ProductDetail.Request()
+		let request = ProductDetail.ShowProductDetail.Request()
 		interactor?.getProduct(request: request)
 	}
 	
-	func displayProductDetail(viewModel: ProductDetail.ProductDetail.ViewModel) {
+	func displayProductDetail(viewModel: ProductDetail.ShowProductDetail.ViewModel) {
 		
+		self.title = viewModel.product?.category?.desc ?? ""
 		
+		if let url = viewModel.product?.imageUrl {
+			productImageView.setImage(withUrl: url)
+		}else{
+			productImageView.image = UIImage()
+		}
+		
+		productNameLabel.text = "\(viewModel.product?.name ?? "Produto")"
+		
+		if viewModel.product?.isPromotion ?? false {
+			originalPriceLabel.isHidden = false
+			priceView.isHidden = false
+			originalPriceLabel.text = "\(viewModel.product?.originalPrice ?? "R$ --")"
+			priceLabel.text = "\(viewModel.product?.price ?? "R$ --")"
+		}else{
+			originalPriceLabel.isHidden = true
+			priceView.isHidden = true
+			priceLabel.text = "\(viewModel.product?.price ?? "R$ --")"
+		}
+		
+		productDescTextView.text = (viewModel.product?.desc ?? "-").htmlToString
+		productDescTextView.contentOffset = CGPoint(x: 0, y: 0)
 	}
+	
+	// MARK: Reserve Product
+	
+	@IBOutlet weak var reserveProductButton: CornerRadiusButton!
+	
+	@IBAction func reserveProduct(_ sender: Any) {
+		
+		interactor?.reserveProduct(request: ProductDetail.ReserveProduct.Request())
+	}
+	
+	func displayReserveMessage(viewModel: ProductDetail.ReserveProduct.ViewModel) {
+		
+		let alert = UIAlertController(title: "", message: viewModel.message, preferredStyle: .alert)
+		let action = UIAlertAction(title: "Ok", style: .default)
+		
+		alert.addAction(action)
+		
+		present(alert, animated: true)
+	}
+	
 }

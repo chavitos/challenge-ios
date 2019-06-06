@@ -21,20 +21,20 @@ class ProductDetailWorker {
 		self.productDetailWorker = productDetailWorker
 	}
 	
-//	func getData(completion:@escaping(ReturnData?,Error?) -> Void) {
-//
-//		ProductDetailWorker.getData { (data: () throws -> ReturnData) in
-//
-//			do{
-//				let returnData = try data()
-//				completion(returnData,nil)
-//			}catch let error{
-//				completion(nil, error)
-//			}
-//		}
-//	}
+	func reserve(product productId:Int, completion:@escaping(ProductReserve?, Error?) -> Void) {
+		
+		productDetailWorker.reserve(product: productId) { (reserve:() throws -> ProductReserve) in
+			
+			do{
+				let result = try reserve()
+				completion(result,nil)
+			}catch let error{
+				completion(nil,error)
+			}
+		}
+	}
 }
 
 protocol ProductDetailWorkerProtocol {
-//	func getData(completion:@escaping(() throws -> ReturnData) -> Void)
+	func reserve(product productId:Int, completion:@escaping(() throws -> ProductReserve) -> Void)
 }

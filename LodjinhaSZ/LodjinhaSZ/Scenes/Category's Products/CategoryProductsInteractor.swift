@@ -63,6 +63,8 @@ class CategoryProductsInteractor: CategoryProductsBusinessLogic, CategoryProduct
 	
 	func storeProduct(request: CategoryProducts.ShowProductDetail.Request) {
 		
+		self.product = request.product
+		
 		presenter?.presentProductDetail(response: CategoryProducts.ShowProductDetail.Response())
 	}
 }

@@ -10,7 +10,6 @@ import Foundation
 
 class CategoryProductsNetworkWorker:CategoryProductsWorkerProtocol{
 	
-	
 	func getProducts(ofCategory categoryId: Int, withOffset offset: Int, andLimit limit: Int, completion: @escaping (() throws -> ProductList) -> Void) {
 	
 		let request = LodjinhaSZRequests.getProducts(offset: offset, limit: limit, categoryId: categoryId)

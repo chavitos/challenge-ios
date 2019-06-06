@@ -36,7 +36,7 @@ class ProductTableViewCell: UITableViewCell {
 			productImageView.image = UIImage()
 		}
 		
-		productNameLabel.attributedText = "\(product.name ?? "Produto:") \(product.desc ?? "-")".htmlToAttributedString
+		productNameLabel.text = "\(product.name ?? "Produto"): \(product.desc ?? "-")".htmlToString
 		
 		if product.isPromotion {
 			originalPriceLabel.isHidden = false

@@ -16,7 +16,7 @@ enum ProductDetail {
 	
 	// MARK: Use cases
 	
-	enum ProductDetail {
+	enum ShowProductDetail {
 		
 		struct Request {
 			
@@ -30,6 +30,24 @@ enum ProductDetail {
 		struct ViewModel {
 			
 			var product:ProductViewModel?
+		}
+	}
+	
+	enum ReserveProduct {
+		
+		struct Request {
+			
+		}
+		
+		struct Response {
+			
+			var productReserve:ProductReserve?
+			var error:Error?
+		}
+		
+		struct ViewModel {
+			
+			var message:String
 		}
 	}
 }

@@ -13,7 +13,8 @@
 import UIKit
 
 protocol ProductDetailPresentationLogic {
-	func presentProductDetail(response: ProductDetail.ProductDetail.Response)
+	func presentProductDetail(response: ProductDetail.ShowProductDetail.Response)
+	func presentReserveMessage(response: ProductDetail.ReserveProduct.Response)
 }
 
 class ProductDetailPresenter: ProductDetailPresentationLogic {
@@ -22,9 +23,23 @@ class ProductDetailPresenter: ProductDetailPresentationLogic {
 	
 	// MARK: Get Product
 	
-	func presentProductDetail(response: ProductDetail.ProductDetail.Response) {
+	func presentProductDetail(response: ProductDetail.ShowProductDetail.Response) {
 		
-		let viewModel = ProductDetail.ProductDetail.ViewModel(product: response.product)
+		let viewModel = ProductDetail.ShowProductDetail.ViewModel(product: response.product)
 		viewController?.displayProductDetail(viewModel: viewModel)
+	}
+	
+	// MARK: Reserve Product
+	
+	func presentReserveMessage(response: ProductDetail.ReserveProduct.Response) {
+		
+		var message:String = "Não foi possível reservar o produto"
+		
+		if response.error == nil, let result = response.productReserve?.result, result == "success" {
+			
+			message = "Produto reservado com sucesso"
+		}
+		
+		viewController?.displayReserveMessage(viewModel: ProductDetail.ReserveProduct.ViewModel(message: message))
 	}
 }

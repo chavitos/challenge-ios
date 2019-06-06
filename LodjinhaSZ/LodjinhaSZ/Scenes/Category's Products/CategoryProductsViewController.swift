@@ -143,12 +143,7 @@ class CategoryProductsViewController: UIViewController, CategoryProductsDisplayL
 		}
 	}
 	
-	// MARK: Show Product Detial
-	
-	func storeProduct() {
-		
-		
-	}
+	// MARK: Show Product Detail
 	
 	func displayProductDetail(viewModel: CategoryProducts.ShowProductDetail.ViewModel) {
 		
@@ -181,7 +176,9 @@ extension CategoryProductsViewController: UITableViewDelegate, UITableViewDataSo
 		let cell = tableView.cellForRow(at: indexPath)
 		cell?.isSelected = false
 		
+		let product = self.products[indexPath.row]
 		
+		interactor?.storeProduct(request: CategoryProducts.ShowProductDetail.Request(product: product))
 	}
 	
 	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

@@ -55,24 +55,27 @@ class CategoryProductsPresenter: CategoryProductsPresentationLogic {
 		
 		var viewModelPopProducts:[ProductViewModel] = []
 		
-		for product in popProducts.data ?? [] {
+		DispatchQueue.global(qos: .utility).sync {
 			
-			let currencyFormatter    = NumberFormatter().getCurrencyFormatter()
-			let originalPrice = currencyFormatter.string(from: NSNumber(value: product.originalPrice ?? 0.00))
-			let price = currencyFormatter.string(from: NSNumber(value: product.price ?? 0.00))
-			
-			let viewModelProduct = ProductViewModel(category: CategoryViewModel(id: product.category?.id,
-																				desc: product.category?.desc,
-																				categoryImageUrl: product.category?.imageUrl),
-													desc: product.desc,
-													id: product.id,
-													name: product.name,
-													originalPrice: originalPrice,
-													price: price,
-													imageUrl: product.imageUrl,
-													isPromotion: product.isPromotion)
-			
-			viewModelPopProducts.append(viewModelProduct)
+			for product in popProducts.data ?? [] {
+				
+				let currencyFormatter    = NumberFormatter().getCurrencyFormatter()
+				let originalPrice = currencyFormatter.string(from: NSNumber(value: product.originalPrice ?? 0.00))
+				let price = currencyFormatter.string(from: NSNumber(value: product.price ?? 0.00))
+				
+				let viewModelProduct = ProductViewModel(category: CategoryViewModel(id: product.category?.id,
+																					desc: product.category?.desc,
+																					categoryImageUrl: product.category?.imageUrl),
+														desc: product.desc,
+														id: product.id,
+														name: product.name,
+														originalPrice: originalPrice,
+														price: price,
+														imageUrl: product.imageUrl,
+														isPromotion: product.isPromotion)
+				
+				viewModelPopProducts.append(viewModelProduct)
+			}
 		}
 		
 		return viewModelPopProducts

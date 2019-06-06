@@ -14,7 +14,7 @@ import UIKit
 
 @objc protocol HomeRoutingLogic {
 	func routeToCategoryProducts(segue: UIStoryboardSegue?)
-//	func routeToProductDetail(segue: UIStoryboardSegue?)
+	func routeToProductDetail(segue: UIStoryboardSegue?)
 }
 
 protocol HomeDataPassing {

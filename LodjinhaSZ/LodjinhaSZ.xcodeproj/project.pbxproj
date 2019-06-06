@@ -29,6 +29,7 @@
 		928D693922A8E377003EC08E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693322A8E377003EC08E /* ProductDetailViewController.swift */; };
 		928D693A22A8E377003EC08E /* ProductDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693422A8E377003EC08E /* ProductDetailInteractor.swift */; };
 		928D693C22A8EA9C003EC08E /* CornerRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693B22A8EA9C003EC08E /* CornerRadiusButton.swift */; };
+		928D693E22A8F493003EC08E /* ReserveProductNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693D22A8F493003EC08E /* ReserveProductNetworkWorker.swift */; };
 		92B127CF22A650E100099989 /* String+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B127CE22A650E100099989 /* String+HTML.swift */; };
 		92B2FCD522A485E700653163 /* UIImageView+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCD422A485E700653163 /* UIImageView+Network.swift */; };
 		92B2FCDC22A4868E00653163 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCD622A4868E00653163 /* HomePresenter.swift */; };
@@ -103,6 +104,7 @@
 		928D693322A8E377003EC08E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		928D693422A8E377003EC08E /* ProductDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailInteractor.swift; sourceTree = "<group>"; };
 		928D693B22A8EA9C003EC08E /* CornerRadiusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusButton.swift; sourceTree = "<group>"; };
+		928D693D22A8F493003EC08E /* ReserveProductNetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveProductNetworkWorker.swift; sourceTree = "<group>"; };
 		92B127CE22A650E100099989 /* String+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTML.swift"; sourceTree = "<group>"; };
 		92B2FCD422A485E700653163 /* UIImageView+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Network.swift"; sourceTree = "<group>"; };
 		92B2FCD622A4868E00653163 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				92B2FCEA22A4D3B900653163 /* CategoryListNetworkWorker.swift */,
 				9226BEFD22A5FCF50054FCD2 /* PopProductListNetworkWorker.swift */,
 				92E6A01722A8702200B93826 /* CategoryProductsNetworkWorker.swift */,
+				928D693D22A8F493003EC08E /* ReserveProductNetworkWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				92B2FCD522A485E700653163 /* UIImageView+Network.swift in Sources */,
 				928D693C22A8EA9C003EC08E /* CornerRadiusButton.swift in Sources */,
 				92E6A01622A83BD700B93826 /* CategoryProductsInteractor.swift in Sources */,
+				928D693E22A8F493003EC08E /* ReserveProductNetworkWorker.swift in Sources */,
 				92B2FCDC22A4868E00653163 /* HomePresenter.swift in Sources */,
 				928D693A22A8E377003EC08E /* ProductDetailInteractor.swift in Sources */,
 				92E6A01C22A8DABC00B93826 /* CategoryProductsViewController.swift in Sources */,

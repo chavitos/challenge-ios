@@ -37,7 +37,6 @@ class CategoryProductsRouter: NSObject, CategoryProductsRoutingLogic, CategoryPr
 		}
 	}
 	
-	
 	// MARK: Passing data
 	
 	func passDataToCategoryProductDetail(source: CategoryProductsDataStore, destination: inout ProductDetailDataStore) {

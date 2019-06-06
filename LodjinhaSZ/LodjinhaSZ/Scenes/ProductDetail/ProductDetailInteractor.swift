@@ -13,7 +13,8 @@
 import UIKit
 
 protocol ProductDetailBusinessLogic {
-	func getProduct(request: ProductDetail.ProductDetail.Request)
+	func getProduct(request: ProductDetail.ShowProductDetail.Request)
+	func reserveProduct(request: ProductDetail.ReserveProduct.Request)
 }
 
 protocol ProductDetailDataStore {
@@ -25,11 +26,35 @@ class ProductDetailInteractor: ProductDetailBusinessLogic, ProductDetailDataStor
 	var presenter	: ProductDetailPresentationLogic?
 	var product		: ProductViewModel?
 	
+	var worker		: ProductDetailWorker?
+	let reserveProductWorker = ReserveProductNetworkWorker()
+	
 	// MARK: Get Product
 	
-	func getProduct(request: ProductDetail.ProductDetail.Request) {
+	func getProduct(request: ProductDetail.ShowProductDetail.Request) {
 		
-		let response = ProductDetail.ProductDetail.Response(product: self.product)
+		let response = ProductDetail.ShowProductDetail.Response(product: self.product)
 		presenter?.presentProductDetail(response: response)
+	}
+	
+	// MARK: Reserve Product
+	
+	func reserveProduct(request: ProductDetail.ReserveProduct.Request) {
+		
+		worker = ProductDetailWorker(reserveProductWorker)
+		worker?.reserve(product: self.product?.id ?? -1, completion: { (reserve, error) in
+			
+			var response:ProductDetail.ReserveProduct.Response
+			
+			if error == nil {
+				
+				response = ProductDetail.ReserveProduct.Response(productReserve: reserve, error: nil)
+			}else{
+				
+				response = ProductDetail.ReserveProduct.Response(productReserve: nil, error: error)
+			}
+			
+			self.presenter?.presentReserveMessage(response: response)
+		})
 	}
 }
