@@ -75,7 +75,10 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 		super.viewDidLoad()
 		
 		let navImage = UIImage(named: "logoNavbar")
-		let navImageView = UIImageView(image: navImage)
+		let navImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 115.0, height: 30.0))
+		navImageView.contentMode = .scaleAspectFill
+		navImageView.clipsToBounds = true
+		navImageView.image = navImage
 		self.navigationItem.titleView = navImageView
 		
 		getBanners()
@@ -114,7 +117,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 			bannerScrollView.configBanners(banners)
 		}else{
 
-			let emptyLabel = EmptyLabel(withView: bannerScrollView, andMessage: "Não foi possível recuperar os banners x_X")
+			let emptyLabel = EmptyLabel(forView: bannerScrollView, andMessage: "Não foi possível recuperar os banners x_X")
 			
 			DispatchQueue.main.async {
 				self.bannerScrollView.addSubview(emptyLabel)
@@ -150,7 +153,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 			}
 		}else{
 			
-			let emptyLabel = EmptyLabel(withView: categoryCollection, andMessage: "Não foi possível recuperar as categorias :'(")
+			let emptyLabel = EmptyLabel(forView: categoryCollection, andMessage: "Não foi possível recuperar as categorias :'(")
 			
 			DispatchQueue.main.async {
 				self.categoryCollection.backgroundView  = emptyLabel
@@ -186,7 +189,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 			}
 		}else{
 			
-			let emptyLabel = EmptyLabel(withView: productTableView, andMessage: "Não foi possível recuperar os produtos mais vendidos :'(")
+			let emptyLabel = EmptyLabel(forView: productTableView, andMessage: "Não foi possível recuperar os produtos mais vendidos :'(")
 			
 			DispatchQueue.main.async {
 				self.productTableView.backgroundView  = emptyLabel
@@ -258,7 +261,7 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		
 		let height = collectionView.frame.size.height - 16
-		let width = (height / 5.0) * 4
+		let width = (height / 20.0) * 17
 		
 		return CGSize(width: width, height: height)
 	}

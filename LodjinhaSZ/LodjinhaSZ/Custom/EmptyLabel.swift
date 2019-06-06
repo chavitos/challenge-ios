@@ -10,7 +10,7 @@ import UIKit
 
 class EmptyLabel: UILabel {
 
-	convenience init(withView view:UIView, andMessage message:String?) {
+	convenience init(forView view:UIView, andMessage message:String?) {
 		
 		let frame = CGRect(origin: CGPoint(x: 0, y: 0), size: view.frame.size)
 		

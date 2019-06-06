@@ -61,25 +61,25 @@
                                 <rect key="frame" x="0.0" y="145.5" width="375" height="120.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="8" id="i2I-1v-WQZ">
-                                    <size key="itemSize" width="80" height="100"/>
+                                    <size key="itemSize" width="85" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="8" minY="8" maxX="0.0" maxY="8"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="UN1-Om-Bd9" userLabel="Category Cell" customClass="CategoryCollectionViewCell" customModule="LodjinhaSZ" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="10.5" width="80" height="100"/>
+                                        <rect key="frame" x="8" y="10.5" width="85" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="85" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PX2-Lt-Rqe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="85" height="75"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trr-k4-P7p">
-                                                    <rect key="frame" x="0.0" y="79" width="80" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Trr-k4-P7p">
+                                                    <rect key="frame" x="0.0" y="74" width="85" height="26"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -87,7 +87,7 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="PX2-Lt-Rqe" firstAttribute="leading" secondItem="UN1-Om-Bd9" secondAttribute="leading" id="5W8-EW-h8k"/>
-                                            <constraint firstItem="PX2-Lt-Rqe" firstAttribute="height" secondItem="UN1-Om-Bd9" secondAttribute="height" multiplier="0.8" id="Gmd-En-NFh"/>
+                                            <constraint firstItem="PX2-Lt-Rqe" firstAttribute="height" secondItem="UN1-Om-Bd9" secondAttribute="height" multiplier="0.75" id="Gmd-En-NFh"/>
                                             <constraint firstAttribute="bottom" secondItem="Trr-k4-P7p" secondAttribute="bottom" id="OEj-8b-b32"/>
                                             <constraint firstItem="Trr-k4-P7p" firstAttribute="top" secondItem="PX2-Lt-Rqe" secondAttribute="bottom" constant="-1" id="X0w-uH-CQE"/>
                                             <constraint firstItem="PX2-Lt-Rqe" firstAttribute="top" secondItem="UN1-Om-Bd9" secondAttribute="top" id="Xtd-bt-JJv"/>
@@ -566,7 +566,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="homeDeselected" selectedImage="homeActive" id="AFS-VS-WZW"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="faM-Q1-USb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" shadowImage="fillVertical" id="faM-Q1-USb">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

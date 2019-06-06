@@ -128,13 +128,24 @@ class CategoryProductsViewController: UIViewController, CategoryProductsDisplayL
 				self.products += products
 				self.total = total
 				
-				DispatchQueue.main.async {
-					self.productsTableView.reloadData()
+				if self.products.count == 0 {
+					
+					let emptyLabel = EmptyLabel(forView: productsTableView, andMessage: "Não existem produtos para essa categoria")
+				
+					DispatchQueue.main.async {
+						self.productsTableView.backgroundView  = emptyLabel
+						self.productsTableView.separatorStyle  = .none
+					}
+				}else{
+					
+					DispatchQueue.main.async {
+						self.productsTableView.reloadData()
+					}
 				}
 			}
 		}else{
 			
-			let emptyLabel = EmptyLabel(withView: productsTableView, andMessage: "Não foi possível recuperar os produtos da categoria T_T")
+			let emptyLabel = EmptyLabel(forView: productsTableView, andMessage: "Não foi possível recuperar os produtos da categoria T_T")
 			
 			DispatchQueue.main.async {
 				self.productsTableView.backgroundView  = emptyLabel
