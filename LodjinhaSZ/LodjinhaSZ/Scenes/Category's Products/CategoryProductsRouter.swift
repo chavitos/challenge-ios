@@ -1,5 +1,5 @@
 //
-//  CategorysProductsRouter.swift
+//  CategoryProductsRouter.swift
 //  LodjinhaSZ
 //
 //  Created by Tiago Chaves on 05/06/19.
@@ -12,18 +12,18 @@
 
 import UIKit
 
-@objc protocol CategorysProductsRoutingLogic {
+@objc protocol CategoryProductsRoutingLogic {
 	//func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol CategorysProductsDataPassing {
-	var dataStore: CategorysProductsDataStore? { get }
+protocol CategoryProductsDataPassing {
+	var dataStore: CategoryProductsDataStore? { get }
 }
 
-class CategorysProductsRouter: NSObject, CategorysProductsRoutingLogic, CategorysProductsDataPassing {
+class CategoryProductsRouter: NSObject, CategoryProductsRoutingLogic, CategoryProductsDataPassing {
 	
-	weak var viewController: CategorysProductsViewController?
-	var dataStore: CategorysProductsDataStore?
+	weak var viewController: CategoryProductsViewController?
+	var dataStore: CategoryProductsDataStore?
 	
 	// MARK: Routing
 	
@@ -44,14 +44,14 @@ class CategorysProductsRouter: NSObject, CategorysProductsRoutingLogic, Category
 	
 	// MARK: Navigation
 	
-	//func navigateToSomewhere(source: CategorysProductsViewController, destination: SomewhereViewController)
+	//func navigateToSomewhere(source: CategoryProductsViewController, destination: SomewhereViewController)
 	//{
 	//  source.show(destination, sender: nil)
 	//}
 	
 	// MARK: Passing data
 	
-	//func passDataToSomewhere(source: CategorysProductsDataStore, destination: inout SomewhereDataStore)
+	//func passDataToSomewhere(source: CategoryProductsDataStore, destination: inout SomewhereDataStore)
 	//{
 	//  destination.name = source.name
 	//}

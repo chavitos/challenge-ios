@@ -1,5 +1,5 @@
 //
-//  CategorysProductsPresenter.swift
+//  CategoryProductsPresenter.swift
 //  LodjinhaSZ
 //
 //  Created by Tiago Chaves on 05/06/19.
@@ -12,30 +12,39 @@
 
 import UIKit
 
-protocol CategorysProductsPresentationLogic {
-	func presentCategorysProducts(response: CategorysProducts.getCategorysProducts.Response)
+protocol CategoryProductsPresentationLogic {
+	func presentCategoryProducts(response: CategoryProducts.getCategoryProducts.Response)
+	func presentCategoryName(response: CategoryProducts.getCategoryName.Response)
 }
 
-class CategorysProductsPresenter: CategorysProductsPresentationLogic {
+class CategoryProductsPresenter: CategoryProductsPresentationLogic {
 	
-	weak var viewController: CategorysProductsDisplayLogic?
+	weak var viewController: CategoryProductsDisplayLogic?
+	
+	// MARK: Get Category Name
+	
+	func presentCategoryName(response: CategoryProducts.getCategoryName.Response) {
+		
+		let viewModel = CategoryProducts.getCategoryName.ViewModel(categoryName: response.categoryName)
+		viewController?.displayCategoryName(viewModel: viewModel)
+	}
 	
 	// MARK: Get Category's Products
 	
-	func presentCategorysProducts(response: CategorysProducts.getCategorysProducts.Response) {
+	func presentCategoryProducts(response: CategoryProducts.getCategoryProducts.Response) {
 		
-		var viewModel:CategorysProducts.getCategorysProducts.ViewModel
+		var viewModel:CategoryProducts.getCategoryProducts.ViewModel
 		
 		if response.error == nil, let products = response.products {
 			
 			let productsViewModel = getViewModel(ofPopProducts: products)
-			viewModel = CategorysProducts.getCategorysProducts.ViewModel(products: productsViewModel,
+			viewModel = CategoryProducts.getCategoryProducts.ViewModel(products: productsViewModel,
 																		 offset: response.products?.offset,
 																		 total: response.products?.total,
 																		 error: nil)
 		}else{
 			
-			viewModel = CategorysProducts.getCategorysProducts.ViewModel(products: nil, offset: nil, total: nil, error: response.error)
+			viewModel = CategoryProducts.getCategoryProducts.ViewModel(products: nil, offset: nil, total: nil, error: response.error)
 		}
 		
 		viewController?.displayProducts(viewModel: viewModel)

@@ -1,5 +1,5 @@
 //
-//  CategorysProductsModels.swift
+//  CategoryProductsModels.swift
 //  LodjinhaSZ
 //
 //  Created by Tiago Chaves on 05/06/19.
@@ -12,11 +12,28 @@
 
 import UIKit
 
-enum CategorysProducts {
+enum CategoryProducts {
 	
 	// MARK: Use cases
 	
-	enum getCategorysProducts {
+	enum getCategoryName {
+		
+		struct Request {
+			
+		}
+		
+		struct Response {
+			
+			var categoryName:String?
+		}
+		
+		struct ViewModel {
+			
+			var categoryName:String?
+		}
+	}
+	
+	enum getCategoryProducts {
 		
 		struct Request {
 			
@@ -36,6 +53,24 @@ enum CategorysProducts {
 			var offset	: Int?
 			var total	: Int?
 			var error	: Error?
+		}
+	}
+	
+	enum showProductDetail {
+		
+		struct Request {
+			
+			
+		}
+		
+		struct Response {
+			
+			
+		}
+		
+		struct ViewModel {
+			
+			
 		}
 	}
 }

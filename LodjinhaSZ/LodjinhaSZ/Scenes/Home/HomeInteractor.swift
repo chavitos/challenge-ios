@@ -105,7 +105,7 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
 	func storeDataToNextScreen(request: Home.ShowNextScreen.Request) {
 		
 		switch request.nextScreen {
-		case .categorysProducts(let category):
+		case .CategoryProducts(let category):
 				self.category = category
 		case .productDetail(let product):
 				self.popProduct = product

@@ -198,8 +198,8 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	func displayNextScreen(viewModel: Home.ShowNextScreen.ViewModel) {
 		
 		switch viewModel.nextScreen {
-		case .categorysProducts:
-			self.performSegue(withIdentifier: "CategorysProducts", sender: nil)
+		case .CategoryProducts:
+			self.performSegue(withIdentifier: "CategoryProducts", sender: nil)
 		case .productDetail:
 			self.performSegue(withIdentifier: "ProductDetail", sender: nil)
 		}
@@ -276,7 +276,7 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
 		
 		let category = self.categories[indexPath.row]
 		
-		let request = Home.ShowNextScreen.Request(nextScreen: .categorysProducts(category: category))
+		let request = Home.ShowNextScreen.Request(nextScreen: .CategoryProducts(category: category))
 		self.interactor?.storeDataToNextScreen(request: request)
 	}
 }

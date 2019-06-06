@@ -1,5 +1,5 @@
 //
-//  CategorysProductsViewController.swift
+//  CategoryProductsViewController.swift
 //  LodjinhaSZ
 //
 //  Created by Tiago Chaves on 05/06/19.
@@ -12,14 +12,15 @@
 
 import UIKit
 
-protocol CategorysProductsDisplayLogic: class {
-	func displayProducts(viewModel: CategorysProducts.getCategorysProducts.ViewModel)
+protocol CategoryProductsDisplayLogic: class {
+	func displayProducts(viewModel: CategoryProducts.getCategoryProducts.ViewModel)
+	func displayCategoryName(viewModel: CategoryProducts.getCategoryName.ViewModel)
 }
 
-class CategorysProductsViewController: UIViewController, CategorysProductsDisplayLogic {
+class CategoryProductsViewController: UIViewController, CategoryProductsDisplayLogic {
 	
-	var interactor: CategorysProductsBusinessLogic?
-	var router: (NSObjectProtocol & CategorysProductsRoutingLogic & CategorysProductsDataPassing)?
+	var interactor: CategoryProductsBusinessLogic?
+	var router: (NSObjectProtocol & CategoryProductsRoutingLogic & CategoryProductsDataPassing)?
 	
 	// MARK: Object lifecycle
 	
@@ -39,9 +40,9 @@ class CategorysProductsViewController: UIViewController, CategorysProductsDispla
 	private func setup() {
 		
 		let viewController = self
-		let interactor = CategorysProductsInteractor()
-		let presenter = CategorysProductsPresenter()
-		let router = CategorysProductsRouter()
+		let interactor = CategoryProductsInteractor()
+		let presenter = CategoryProductsPresenter()
+		let router = CategoryProductsRouter()
 		
 		viewController.interactor = interactor
 		viewController.router = router
@@ -71,9 +72,8 @@ class CategorysProductsViewController: UIViewController, CategorysProductsDispla
 		
 		super.viewDidLoad()
 		
-		self.title = self.categoryName
-		
-		getCategorysProducts()
+		getCategoryName()
+		getCategoryProducts()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -83,12 +83,24 @@ class CategorysProductsViewController: UIViewController, CategorysProductsDispla
 		self.tabBarController?.tabBar.isHidden = true
 	}
 	
+	// MARK: Get CategoryName
+	
+	func getCategoryName() {
+		
+		let request = CategoryProducts.getCategoryName.Request()
+		interactor?.getCategoryName(request: request)
+	}
+	
+	func displayCategoryName(viewModel: CategoryProducts.getCategoryName.ViewModel) {
+		
+		self.title = viewModel.categoryName ?? "Produtos"
+	}
+	
 	// MARK: Get Category's Products
 	
 	@IBOutlet weak var productsTableView: UITableView!
-	@IBOutlet weak var getCategorysProductsActivityIndicator: UIActivityIndicatorView!
+	@IBOutlet weak var getCategoryProductsActivityIndicator: UIActivityIndicatorView!
 	
-	var categoryName:String?
 	var offset	: Int = 0
 	var total	: Int = 0
 	let limit	: Int = 20
@@ -96,16 +108,16 @@ class CategorysProductsViewController: UIViewController, CategorysProductsDispla
 	let productCellIdentifier = "productCell"
 	var products:[ProductViewModel] = []
 	
-	func getCategorysProducts() {
+	func getCategoryProducts() {
 		
-		getCategorysProductsActivityIndicator.startAnimating()
-		let request = CategorysProducts.getCategorysProducts.Request(offset: self.offset, limit: self.limit)
-		interactor?.getCategorysProducts(request: request)
+		getCategoryProductsActivityIndicator.startAnimating()
+		let request = CategoryProducts.getCategoryProducts.Request(offset: self.offset, limit: self.limit)
+		interactor?.getCategoryProducts(request: request)
 	}
 	
-	func displayProducts(viewModel: CategorysProducts.getCategorysProducts.ViewModel) {
+	func displayProducts(viewModel: CategoryProducts.getCategoryProducts.ViewModel) {
 		
-		getCategorysProductsActivityIndicator.stopAnimating()
+		getCategoryProductsActivityIndicator.stopAnimating()
 		
 		if viewModel.error == nil {
 			
@@ -131,7 +143,7 @@ class CategorysProductsViewController: UIViewController, CategorysProductsDispla
 	}
 }
 
-extension CategorysProductsViewController: UITableViewDelegate, UITableViewDataSource {
+extension CategoryProductsViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return products.count
@@ -163,7 +175,7 @@ extension CategorysProductsViewController: UITableViewDelegate, UITableViewDataS
 			
 			if offset < total {
 				
-				getCategorysProducts()
+				getCategoryProducts()
 			}
 		}
 	}

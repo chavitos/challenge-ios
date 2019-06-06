@@ -1,5 +1,5 @@
 //
-//  CategorysProductsWorker.swift
+//  CategoryProductsWorker.swift
 //  LodjinhaSZ
 //
 //  Created by Tiago Chaves on 05/06/19.
@@ -12,22 +12,22 @@
 
 import UIKit
 
-class CategorysProductsWorker {
+class CategoryProductsWorker {
 	
-	var categorysProductsWorker:CategorysProductsWorkerProtocol
+	var CategoryProductsWorker:CategoryProductsWorkerProtocol
 	
-	init(_ categorysProductsWorker:CategorysProductsWorkerProtocol) {
+	init(_ CategoryProductsWorker:CategoryProductsWorkerProtocol) {
 		
-		self.categorysProductsWorker = categorysProductsWorker
+		self.CategoryProductsWorker = CategoryProductsWorker
 	}
 	
 	func getProducts(ofCategory categoryId:Int, withOffset offset:Int, andLimit limit:Int, completion:@escaping(ProductList?,Error?) -> Void) {
 	
-		categorysProductsWorker.getProducts(ofCategory: categoryId, withOffset: offset, andLimit: limit) { (categorysProducts: () throws -> ProductList) in
+		CategoryProductsWorker.getProducts(ofCategory: categoryId, withOffset: offset, andLimit: limit) { (CategoryProducts: () throws -> ProductList) in
 		
 			do{
-				let categorysProducts = try categorysProducts()
-				completion(categorysProducts,nil)
+				let CategoryProducts = try CategoryProducts()
+				completion(CategoryProducts,nil)
 			}catch let error{
 				completion(nil, WorkerErrors.networkProblem(error: error))
 			}
@@ -35,6 +35,6 @@ class CategorysProductsWorker {
 	}
 }
 
-protocol CategorysProductsWorkerProtocol {
+protocol CategoryProductsWorkerProtocol {
 	func getProducts(ofCategory categoryId:Int, withOffset offset:Int, andLimit limit:Int, completion:@escaping(() throws -> ProductList) -> Void)
 }

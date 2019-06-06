@@ -1,5 +1,5 @@
 //
-//  CategorysProductsNetworkWorker.swift
+//  CategoryProductsNetworkWorker.swift
 //  LodjinhaSZ
 //
 //  Created by Tiago Chaves on 05/06/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CategorysProductsNetworkWorker:CategorysProductsWorkerProtocol{
+class CategoryProductsNetworkWorker:CategoryProductsWorkerProtocol{
 	
 	
 	func getProducts(ofCategory categoryId: Int, withOffset offset: Int, andLimit limit: Int, completion: @escaping (() throws -> ProductList) -> Void) {

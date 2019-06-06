@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol HomeRoutingLogic {
-	func routeToCategorysProducts(segue: UIStoryboardSegue?)
+	func routeToCategoryProducts(segue: UIStoryboardSegue?)
 //	func routeToProductDetail(segue: UIStoryboardSegue?)
 }
 
@@ -28,14 +28,13 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
 	
 	// MARK: Routing
 	
-	func routeToCategorysProducts(segue: UIStoryboardSegue?) {
+	func routeToCategoryProducts(segue: UIStoryboardSegue?) {
 		
 		if let segue = segue {
 			
-			let destinationVC = segue.destination as! CategorysProductsViewController
-			destinationVC.categoryName = dataStore?.category?.desc ?? "Produtos por categoria"
+			let destinationVC = segue.destination as! CategoryProductsViewController
 			var destinationDS = destinationVC.router!.dataStore!
-			passDataToCategorysProducts(source: dataStore!, destination: &destinationDS)
+			passDataToCategoryProducts(source: dataStore!, destination: &destinationDS)
 		}
 	}
 	
@@ -49,21 +48,9 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
 //		}
 //	}
 	
-	// MARK: Navigation
-	
-	func navigateToCategorysProducts(source: HomeViewController, destination: CategorysProductsViewController) {
-		
-		source.show(destination, sender: nil)
-	}
-	
-//	func navigateToProductDetail(source: HomeViewController, destination: ProductDetailViewController) {
-//
-//		source.show(destination, sender: nil)
-//	}
-	
 	// MARK: Passing data
 	
-	func passDataToCategorysProducts(source: HomeDataStore, destination: inout CategorysProductsDataStore) {
+	func passDataToCategoryProducts(source: HomeDataStore, destination: inout CategoryProductsDataStore) {
 		
 		destination.category = source.category
 	}
