@@ -22,6 +22,13 @@
 		9226BF0922A6259D0054FCD2 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9226BF0822A6259D0054FCD2 /* ProductTableViewCell.swift */; };
 		9226BF0B22A62AE00054FCD2 /* BannerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9226BF0A22A62AE00054FCD2 /* BannerScrollView.swift */; };
 		9253C19A22A34214005F6580 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253C19922A34214005F6580 /* NetworkManager.swift */; };
+		928D693522A8E377003EC08E /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D692F22A8E377003EC08E /* ProductDetailPresenter.swift */; };
+		928D693622A8E377003EC08E /* ProductDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693022A8E377003EC08E /* ProductDetailWorker.swift */; };
+		928D693722A8E377003EC08E /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693122A8E377003EC08E /* ProductDetailRouter.swift */; };
+		928D693822A8E377003EC08E /* ProductDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693222A8E377003EC08E /* ProductDetailModels.swift */; };
+		928D693922A8E377003EC08E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693322A8E377003EC08E /* ProductDetailViewController.swift */; };
+		928D693A22A8E377003EC08E /* ProductDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693422A8E377003EC08E /* ProductDetailInteractor.swift */; };
+		928D693C22A8EA9C003EC08E /* CornerRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693B22A8EA9C003EC08E /* CornerRadiusButton.swift */; };
 		92B127CF22A650E100099989 /* String+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B127CE22A650E100099989 /* String+HTML.swift */; };
 		92B2FCD522A485E700653163 /* UIImageView+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCD422A485E700653163 /* UIImageView+Network.swift */; };
 		92B2FCDC22A4868E00653163 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B2FCD622A4868E00653163 /* HomePresenter.swift */; };
@@ -89,6 +96,13 @@
 		9226BF0822A6259D0054FCD2 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		9226BF0A22A62AE00054FCD2 /* BannerScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerScrollView.swift; sourceTree = "<group>"; };
 		9253C19922A34214005F6580 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		928D692F22A8E377003EC08E /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
+		928D693022A8E377003EC08E /* ProductDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailWorker.swift; sourceTree = "<group>"; };
+		928D693122A8E377003EC08E /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
+		928D693222A8E377003EC08E /* ProductDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModels.swift; sourceTree = "<group>"; };
+		928D693322A8E377003EC08E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		928D693422A8E377003EC08E /* ProductDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailInteractor.swift; sourceTree = "<group>"; };
+		928D693B22A8EA9C003EC08E /* CornerRadiusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusButton.swift; sourceTree = "<group>"; };
 		92B127CE22A650E100099989 /* String+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTML.swift"; sourceTree = "<group>"; };
 		92B2FCD422A485E700653163 /* UIImageView+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Network.swift"; sourceTree = "<group>"; };
 		92B2FCD622A4868E00653163 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -212,6 +226,7 @@
 			children = (
 				92B2FCD222A474AE00653163 /* Home */,
 				92E6A00A22A83B9800B93826 /* Category's Products */,
+				92B4160B22A8DE2F00EFBFD1 /* ProductDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -267,8 +282,22 @@
 				92B2FCE722A4C99900653163 /* CustomTabBar.swift */,
 				9226BF0A22A62AE00054FCD2 /* BannerScrollView.swift */,
 				92E6A00822A8346100B93826 /* EmptyLabel.swift */,
+				928D693B22A8EA9C003EC08E /* CornerRadiusButton.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		92B4160B22A8DE2F00EFBFD1 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				928D693222A8E377003EC08E /* ProductDetailModels.swift */,
+				928D693322A8E377003EC08E /* ProductDetailViewController.swift */,
+				928D693422A8E377003EC08E /* ProductDetailInteractor.swift */,
+				928D693022A8E377003EC08E /* ProductDetailWorker.swift */,
+				928D692F22A8E377003EC08E /* ProductDetailPresenter.swift */,
+				928D693122A8E377003EC08E /* ProductDetailRouter.swift */,
+			);
+			path = ProductDetail;
 			sourceTree = "<group>";
 		};
 		92BCC8EF22A1F59C009FFDDF = {
@@ -575,6 +604,7 @@
 			files = (
 				9226BF0522A625790054FCD2 /* BannerView.swift in Sources */,
 				9253C19A22A34214005F6580 /* NetworkManager.swift in Sources */,
+				928D693722A8E377003EC08E /* ProductDetailRouter.swift in Sources */,
 				9222035A22A30D23003614DC /* DataList.swift in Sources */,
 				92B127CF22A650E100099989 /* String+HTML.swift in Sources */,
 				92BCC8FC22A1F59D009FFDDF /* AppDelegate.swift in Sources */,
@@ -585,19 +615,25 @@
 				9226BF0922A6259D0054FCD2 /* ProductTableViewCell.swift in Sources */,
 				9226BEFE22A5FCF50054FCD2 /* PopProductListNetworkWorker.swift in Sources */,
 				92E6A01322A83BD700B93826 /* CategoryProductsRouter.swift in Sources */,
+				928D693622A8E377003EC08E /* ProductDetailWorker.swift in Sources */,
 				9226BF0022A604FF0054FCD2 /* NumberFormatter+Currency.swift in Sources */,
 				92B2FCEB22A4D3BA00653163 /* CategoryListNetworkWorker.swift in Sources */,
 				9221D8AB22A4369800E7133A /* ProductReserve.swift in Sources */,
 				9226BF0B22A62AE00054FCD2 /* BannerScrollView.swift in Sources */,
+				928D693522A8E377003EC08E /* ProductDetailPresenter.swift in Sources */,
+				928D693922A8E377003EC08E /* ProductDetailViewController.swift in Sources */,
 				92B2FCD522A485E700653163 /* UIImageView+Network.swift in Sources */,
+				928D693C22A8EA9C003EC08E /* CornerRadiusButton.swift in Sources */,
 				92E6A01622A83BD700B93826 /* CategoryProductsInteractor.swift in Sources */,
 				92B2FCDC22A4868E00653163 /* HomePresenter.swift in Sources */,
+				928D693A22A8E377003EC08E /* ProductDetailInteractor.swift in Sources */,
 				92E6A01C22A8DABC00B93826 /* CategoryProductsViewController.swift in Sources */,
 				9222035422A30A63003614DC /* Banner.swift in Sources */,
 				92B2FCDD22A4868E00653163 /* HomeWorker.swift in Sources */,
 				9222035622A30AC7003614DC /* Category.swift in Sources */,
 				92B2FCE022A4868E00653163 /* HomeViewController.swift in Sources */,
 				92B2FCDE22A4868E00653163 /* HomeRouter.swift in Sources */,
+				928D693822A8E377003EC08E /* ProductDetailModels.swift in Sources */,
 				92B2FCE622A4949600653163 /* BannerListNetworkWorker.swift in Sources */,
 				92E6A01122A83BD700B93826 /* CategoryProductsPresenter.swift in Sources */,
 				9226BF0722A6258F0054FCD2 /* CategoryCollectionViewCell.swift in Sources */,

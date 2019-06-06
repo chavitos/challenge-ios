@@ -13,8 +13,9 @@
 import UIKit
 
 protocol CategoryProductsPresentationLogic {
-	func presentCategoryProducts(response: CategoryProducts.getCategoryProducts.Response)
-	func presentCategoryName(response: CategoryProducts.getCategoryName.Response)
+	func presentCategoryProducts(response: CategoryProducts.GetCategoryProducts.Response)
+	func presentCategoryName(response: CategoryProducts.GetCategoryName.Response)
+	func presentProductDetail(response: CategoryProducts.ShowProductDetail.Response)
 }
 
 class CategoryProductsPresenter: CategoryProductsPresentationLogic {
@@ -23,28 +24,28 @@ class CategoryProductsPresenter: CategoryProductsPresentationLogic {
 	
 	// MARK: Get Category Name
 	
-	func presentCategoryName(response: CategoryProducts.getCategoryName.Response) {
+	func presentCategoryName(response: CategoryProducts.GetCategoryName.Response) {
 		
-		let viewModel = CategoryProducts.getCategoryName.ViewModel(categoryName: response.categoryName)
+		let viewModel = CategoryProducts.GetCategoryName.ViewModel(categoryName: response.categoryName)
 		viewController?.displayCategoryName(viewModel: viewModel)
 	}
 	
 	// MARK: Get Category's Products
 	
-	func presentCategoryProducts(response: CategoryProducts.getCategoryProducts.Response) {
+	func presentCategoryProducts(response: CategoryProducts.GetCategoryProducts.Response) {
 		
-		var viewModel:CategoryProducts.getCategoryProducts.ViewModel
+		var viewModel:CategoryProducts.GetCategoryProducts.ViewModel
 		
 		if response.error == nil, let products = response.products {
 			
 			let productsViewModel = getViewModel(ofPopProducts: products)
-			viewModel = CategoryProducts.getCategoryProducts.ViewModel(products: productsViewModel,
+			viewModel = CategoryProducts.GetCategoryProducts.ViewModel(products: productsViewModel,
 																		 offset: response.products?.offset,
 																		 total: response.products?.total,
 																		 error: nil)
 		}else{
 			
-			viewModel = CategoryProducts.getCategoryProducts.ViewModel(products: nil, offset: nil, total: nil, error: response.error)
+			viewModel = CategoryProducts.GetCategoryProducts.ViewModel(products: nil, offset: nil, total: nil, error: response.error)
 		}
 		
 		viewController?.displayProducts(viewModel: viewModel)
@@ -75,5 +76,12 @@ class CategoryProductsPresenter: CategoryProductsPresentationLogic {
 		}
 		
 		return viewModelPopProducts
+	}
+	
+	// MARK: Present Product Detail
+	
+	func presentProductDetail(response: CategoryProducts.ShowProductDetail.Response) {
+		
+		viewController?.displayProductDetail(viewModel: CategoryProducts.ShowProductDetail.ViewModel())
 	}
 }

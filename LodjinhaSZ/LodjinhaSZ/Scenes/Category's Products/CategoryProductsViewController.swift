@@ -13,8 +13,9 @@
 import UIKit
 
 protocol CategoryProductsDisplayLogic: class {
-	func displayProducts(viewModel: CategoryProducts.getCategoryProducts.ViewModel)
-	func displayCategoryName(viewModel: CategoryProducts.getCategoryName.ViewModel)
+	func displayProducts(viewModel: CategoryProducts.GetCategoryProducts.ViewModel)
+	func displayCategoryName(viewModel: CategoryProducts.GetCategoryName.ViewModel)
+	func displayProductDetail(viewModel: CategoryProducts.ShowProductDetail.ViewModel)
 }
 
 class CategoryProductsViewController: UIViewController, CategoryProductsDisplayLogic {
@@ -87,11 +88,11 @@ class CategoryProductsViewController: UIViewController, CategoryProductsDisplayL
 	
 	func getCategoryName() {
 		
-		let request = CategoryProducts.getCategoryName.Request()
+		let request = CategoryProducts.GetCategoryName.Request()
 		interactor?.getCategoryName(request: request)
 	}
 	
-	func displayCategoryName(viewModel: CategoryProducts.getCategoryName.ViewModel) {
+	func displayCategoryName(viewModel: CategoryProducts.GetCategoryName.ViewModel) {
 		
 		self.title = viewModel.categoryName ?? "Produtos"
 	}
@@ -111,11 +112,11 @@ class CategoryProductsViewController: UIViewController, CategoryProductsDisplayL
 	func getCategoryProducts() {
 		
 		getCategoryProductsActivityIndicator.startAnimating()
-		let request = CategoryProducts.getCategoryProducts.Request(offset: self.offset, limit: self.limit)
+		let request = CategoryProducts.GetCategoryProducts.Request(offset: self.offset, limit: self.limit)
 		interactor?.getCategoryProducts(request: request)
 	}
 	
-	func displayProducts(viewModel: CategoryProducts.getCategoryProducts.ViewModel) {
+	func displayProducts(viewModel: CategoryProducts.GetCategoryProducts.ViewModel) {
 		
 		getCategoryProductsActivityIndicator.stopAnimating()
 		
@@ -140,6 +141,18 @@ class CategoryProductsViewController: UIViewController, CategoryProductsDisplayL
 				self.productsTableView.separatorStyle  = .none
 			}
 		}
+	}
+	
+	// MARK: Show Product Detial
+	
+	func storeProduct() {
+		
+		
+	}
+	
+	func displayProductDetail(viewModel: CategoryProducts.ShowProductDetail.ViewModel) {
+		
+		self.performSegue(withIdentifier: "CategoryProductDetail", sender: nil)
 	}
 }
 
@@ -167,6 +180,8 @@ extension CategoryProductsViewController: UITableViewDelegate, UITableViewDataSo
 		
 		let cell = tableView.cellForRow(at: indexPath)
 		cell?.isSelected = false
+		
+		
 	}
 	
 	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

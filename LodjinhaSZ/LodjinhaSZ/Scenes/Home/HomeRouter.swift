@@ -38,15 +38,15 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
 		}
 	}
 	
-//	func routeToProductDetail(segue: UIStoryboardSegue?) {
-//
-//		if let segue = segue {
-//
-//			let destinationVC = segue.destination as! ProductDetailViewController
-//			var destinationDS = destinationVC.router!.dataStore!
-//			passDataToProductDetail(source: dataStore!, destination: &destinationDS)
-//		}
-//	}
+	func routeToProductDetail(segue: UIStoryboardSegue?) {
+
+		if let segue = segue {
+
+			let destinationVC = segue.destination as! ProductDetailViewController
+			var destinationDS = destinationVC.router!.dataStore!
+			passDataToProductDetail(source: dataStore!, destination: &destinationDS)
+		}
+	}
 	
 	// MARK: Passing data
 	
@@ -55,8 +55,8 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
 		destination.category = source.category
 	}
 	
-//	func passDataToProductDetail(source: HomeDataStore, destination: inout ProductDetailDataStore) {
-//
-//		destination.product = source.popProduct
-//	}
+	func passDataToProductDetail(source: HomeDataStore, destination: inout ProductDetailDataStore) {
+
+		destination.product = source.popProduct
+	}
 }

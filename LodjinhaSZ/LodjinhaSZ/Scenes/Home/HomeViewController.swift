@@ -198,7 +198,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 	func displayNextScreen(viewModel: Home.ShowNextScreen.ViewModel) {
 		
 		switch viewModel.nextScreen {
-		case .CategoryProducts:
+		case .categoryProducts:
 			self.performSegue(withIdentifier: "CategoryProducts", sender: nil)
 		case .productDetail:
 			self.performSegue(withIdentifier: "ProductDetail", sender: nil)
@@ -240,6 +240,11 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource {
 		
 		let cell = tableView.cellForRow(at: indexPath)
 		cell?.isSelected = false
+		
+		let product = self.popProducts[indexPath.row]
+		
+		let request = Home.ShowNextScreen.Request(nextScreen: .productDetail(product: product))
+		self.interactor?.storeDataToNextScreen(request: request)
 	}
 }
 
@@ -276,7 +281,7 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
 		
 		let category = self.categories[indexPath.row]
 		
-		let request = Home.ShowNextScreen.Request(nextScreen: .CategoryProducts(category: category))
+		let request = Home.ShowNextScreen.Request(nextScreen: .categoryProducts(category: category))
 		self.interactor?.storeDataToNextScreen(request: request)
 	}
 }

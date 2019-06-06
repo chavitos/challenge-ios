@@ -16,7 +16,7 @@ enum CategoryProducts {
 	
 	// MARK: Use cases
 	
-	enum getCategoryName {
+	enum GetCategoryName {
 		
 		struct Request {
 			
@@ -33,7 +33,7 @@ enum CategoryProducts {
 		}
 	}
 	
-	enum getCategoryProducts {
+	enum GetCategoryProducts {
 		
 		struct Request {
 			
@@ -56,11 +56,11 @@ enum CategoryProducts {
 		}
 	}
 	
-	enum showProductDetail {
+	enum ShowProductDetail {
 		
 		struct Request {
 			
-			
+			var product: ProductViewModel?
 		}
 		
 		struct Response {

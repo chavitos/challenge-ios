@@ -15,7 +15,7 @@ import UIKit
 enum NextScreen {
 	
 	case productDetail(product:ProductViewModel)
-	case CategoryProducts(category:CategoryViewModel)
+	case categoryProducts(category:CategoryViewModel)
 }
 
 protocol HomePresentationLogic {

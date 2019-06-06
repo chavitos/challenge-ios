@@ -13,8 +13,9 @@
 import UIKit
 
 protocol CategoryProductsBusinessLogic {
-	func getCategoryProducts(request: CategoryProducts.getCategoryProducts.Request)
-	func getCategoryName(request: CategoryProducts.getCategoryName.Request)
+	func getCategoryProducts(request: CategoryProducts.GetCategoryProducts.Request)
+	func getCategoryName(request: CategoryProducts.GetCategoryName.Request)
+	func storeProduct(request: CategoryProducts.ShowProductDetail.Request)
 }
 
 protocol CategoryProductsDataStore {
@@ -33,28 +34,35 @@ class CategoryProductsInteractor: CategoryProductsBusinessLogic, CategoryProduct
 	
 	// MARK: Get Category Name
 	
-	func getCategoryName(request: CategoryProducts.getCategoryName.Request) {
+	func getCategoryName(request: CategoryProducts.GetCategoryName.Request) {
 		
-		let response = CategoryProducts.getCategoryName.Response(categoryName: category?.desc)
+		let response = CategoryProducts.GetCategoryName.Response(categoryName: category?.desc)
 		presenter?.presentCategoryName(response: response)
 	}
 	
 	// MARK: Get Category's Products
 	
-	func getCategoryProducts(request: CategoryProducts.getCategoryProducts.Request) {
+	func getCategoryProducts(request: CategoryProducts.GetCategoryProducts.Request) {
 		
 		worker = CategoryProductsWorker(categoryProductsWorker)
 		worker?.getProducts(ofCategory: self.category?.id ?? -1, withOffset: request.offset, andLimit: request.limit, completion: { (productList, error) in
 			
-			let response:CategoryProducts.getCategoryProducts.Response
+			let response:CategoryProducts.GetCategoryProducts.Response
 			
 			if error == nil {
-				response = CategoryProducts.getCategoryProducts.Response(products: productList, error: nil)
+				response = CategoryProducts.GetCategoryProducts.Response(products: productList, error: nil)
 			}else{
-				response = CategoryProducts.getCategoryProducts.Response(products: nil, error: error)
+				response = CategoryProducts.GetCategoryProducts.Response(products: nil, error: error)
 			}
 			
 			self.presenter?.presentCategoryProducts(response: response)
 		})
+	}
+	
+	// MARK: Store Product
+	
+	func storeProduct(request: CategoryProducts.ShowProductDetail.Request) {
+		
+		presenter?.presentProductDetail(response: CategoryProducts.ShowProductDetail.Response())
 	}
 }
