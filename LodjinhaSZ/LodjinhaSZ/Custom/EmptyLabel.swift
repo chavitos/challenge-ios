@@ -17,7 +17,7 @@ class EmptyLabel: UILabel {
 		self.init(frame: frame)
 		
 		self.text          		= message ?? ""
-		self.textColor     		= UIColor.black
+		self.textColor     		= UIColor.prettyPurple
 		self.backgroundColor 	= UIColor.background
 		self.textAlignment 		= .center
 		self.numberOfLines 		= 2

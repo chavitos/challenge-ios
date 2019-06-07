@@ -105,19 +105,23 @@ class CategoryProductsViewController: UIViewController, CategoryProductsDisplayL
 	var offset	: Int = 0
 	var total	: Int = 0
 	let limit	: Int = 20
+	var fetching:Bool = false
 	
 	let productCellIdentifier = "productCell"
 	var products:[ProductViewModel] = []
 	
 	func getCategoryProducts() {
 		
+		fetching = true
 		getCategoryProductsActivityIndicator.startAnimating()
+		
 		let request = CategoryProducts.GetCategoryProducts.Request(offset: self.offset, limit: self.limit)
 		interactor?.getCategoryProducts(request: request)
 	}
 	
 	func displayProducts(viewModel: CategoryProducts.GetCategoryProducts.ViewModel) {
 		
+		fetching = false
 		getCategoryProductsActivityIndicator.stopAnimating()
 		
 		if viewModel.error == nil {
@@ -137,9 +141,12 @@ class CategoryProductsViewController: UIViewController, CategoryProductsDisplayL
 						self.productsTableView.separatorStyle  = .none
 					}
 				}else{
+					// Esse tratamento é para evitar reloads desnecessários na tableView, uma vez que o serviço retorna arrays vazios na paginação mesmo indicando que existem mais produtos...
+					if products.count > 0 {
 					
-					DispatchQueue.main.async {
-						self.productsTableView.reloadData()
+						DispatchQueue.main.async {
+							self.productsTableView.reloadData()
+						}
 					}
 				}
 			}
@@ -192,13 +199,19 @@ extension CategoryProductsViewController: UITableViewDelegate, UITableViewDataSo
 		interactor?.storeProduct(request: CategoryProducts.ShowProductDetail.Request(product: product))
 	}
 	
-	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+	func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		
-		if indexPath.row == products.count - 1 {
-			
-			if offset < total {
+		let offsetY = scrollView.contentOffset.y
+		let contentHeight = scrollView.contentSize.height
+		
+		if !fetching {
+		
+			if offsetY > contentHeight - scrollView.frame.height {
 				
-				getCategoryProducts()
+				if offset < total {
+					
+					getCategoryProducts()
+				}
 			}
 		}
 	}
