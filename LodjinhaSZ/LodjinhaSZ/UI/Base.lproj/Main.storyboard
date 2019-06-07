@@ -267,7 +267,7 @@
         <!--Category Products View Controller-->
         <scene sceneID="Qdc-jr-N3D">
             <objects>
-                <viewController id="OGS-3b-Xw8" customClass="CategoryProductsViewController" customModule="LodjinhaSZ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoryProductsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OGS-3b-Xw8" customClass="CategoryProductsViewController" customModule="LodjinhaSZ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2aC-kj-Mnd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

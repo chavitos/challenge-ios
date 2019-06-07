@@ -26,8 +26,7 @@ protocol CategoryProductsDataStore {
 class CategoryProductsInteractor: CategoryProductsBusinessLogic, CategoryProductsDataStore {
 	
 	var presenter	: CategoryProductsPresentationLogic?
-	var worker		: CategoryProductsWorker?
-	var categoryProductsWorker: CategoryProductsWorkerProtocol = CategoryProductsNetworkWorker()
+	var worker		: CategoryProductsWorker? = CategoryProductsWorker(CategoryProductsNetworkWorker())
 	
 	var category	: CategoryViewModel?
 	var product		: ProductViewModel?
@@ -44,7 +43,6 @@ class CategoryProductsInteractor: CategoryProductsBusinessLogic, CategoryProduct
 	
 	func getCategoryProducts(request: CategoryProducts.GetCategoryProducts.Request) {
 		
-		worker = CategoryProductsWorker(categoryProductsWorker)
 		worker?.getProducts(ofCategory: self.category?.id ?? -1, withOffset: request.offset, andLimit: request.limit, completion: { (productList, error) in
 			
 			let response:CategoryProducts.GetCategoryProducts.Response

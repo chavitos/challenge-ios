@@ -27,6 +27,11 @@
 		928D20B022A9E45A00EEDD4F /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D20AF22A9E45A00EEDD4F /* AppStyle.swift */; };
 		928D20B322A9E59900EEDD4F /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D20B222A9E59900EEDD4F /* AppInfoView.swift */; };
 		928D20B522A9E65800EEDD4F /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D20B422A9E65800EEDD4F /* AppInfoViewController.swift */; };
+		928D20BC22AA178F00EEDD4F /* CategoryProductsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D20B822AA178F00EEDD4F /* CategoryProductsViewControllerTests.swift */; };
+		928D20BD22AA178F00EEDD4F /* CategoryProductsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D20B922AA178F00EEDD4F /* CategoryProductsInteractorTests.swift */; };
+		928D20BE22AA178F00EEDD4F /* CategoryProductsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D20BA22AA178F00EEDD4F /* CategoryProductsWorkerTests.swift */; };
+		928D20BF22AA178F00EEDD4F /* CategoryProductsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D20BB22AA178F00EEDD4F /* CategoryProductsPresenterTests.swift */; };
+		928D20C122AA235700EEDD4F /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D20C022AA235700EEDD4F /* Seeds.swift */; };
 		928D693522A8E377003EC08E /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D692F22A8E377003EC08E /* ProductDetailPresenter.swift */; };
 		928D693622A8E377003EC08E /* ProductDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693022A8E377003EC08E /* ProductDetailWorker.swift */; };
 		928D693722A8E377003EC08E /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693122A8E377003EC08E /* ProductDetailRouter.swift */; };
@@ -50,7 +55,6 @@
 		92BCC90122A1F59D009FFDDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BCC8FF22A1F59D009FFDDF /* Main.storyboard */; };
 		92BCC90322A1F59D009FFDDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BCC90222A1F59D009FFDDF /* Assets.xcassets */; };
 		92BCC90622A1F59D009FFDDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BCC90422A1F59D009FFDDF /* LaunchScreen.storyboard */; };
-		92BCC91122A1F59D009FFDDF /* LodjinhaSZTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCC91022A1F59D009FFDDF /* LodjinhaSZTests.swift */; };
 		92BCC91C22A1F59D009FFDDF /* LodjinhaSZUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCC91B22A1F59D009FFDDF /* LodjinhaSZUITests.swift */; };
 		92BCC92D22A1FB42009FFDDF /* Pacifico-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BCC92A22A1FB42009FFDDF /* Pacifico-Bold.ttf */; };
 		92BCC92E22A1FB42009FFDDF /* Pacifico-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BCC92B22A1FB42009FFDDF /* Pacifico-Light.ttf */; };
@@ -107,6 +111,11 @@
 		928D20AF22A9E45A00EEDD4F /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		928D20B222A9E59900EEDD4F /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
 		928D20B422A9E65800EEDD4F /* AppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
+		928D20B822AA178F00EEDD4F /* CategoryProductsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsViewControllerTests.swift; sourceTree = "<group>"; };
+		928D20B922AA178F00EEDD4F /* CategoryProductsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsInteractorTests.swift; sourceTree = "<group>"; };
+		928D20BA22AA178F00EEDD4F /* CategoryProductsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsWorkerTests.swift; sourceTree = "<group>"; };
+		928D20BB22AA178F00EEDD4F /* CategoryProductsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsPresenterTests.swift; sourceTree = "<group>"; };
+		928D20C022AA235700EEDD4F /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
 		928D692F22A8E377003EC08E /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
 		928D693022A8E377003EC08E /* ProductDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailWorker.swift; sourceTree = "<group>"; };
 		928D693122A8E377003EC08E /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
@@ -133,7 +142,6 @@
 		92BCC90522A1F59D009FFDDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92BCC90722A1F59D009FFDDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92BCC90C22A1F59D009FFDDF /* LodjinhaSZTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LodjinhaSZTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		92BCC91022A1F59D009FFDDF /* LodjinhaSZTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaSZTests.swift; sourceTree = "<group>"; };
 		92BCC91222A1F59D009FFDDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92BCC91722A1F59D009FFDDF /* LodjinhaSZUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LodjinhaSZUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BCC91B22A1F59D009FFDDF /* LodjinhaSZUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaSZUITests.swift; sourceTree = "<group>"; };
@@ -273,6 +281,26 @@
 			path = "App Info";
 			sourceTree = "<group>";
 		};
+		928D20B622AA175500EEDD4F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				928D20B722AA175F00EEDD4F /* Category's Product */,
+				928D20C022AA235700EEDD4F /* Seeds.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		928D20B722AA175F00EEDD4F /* Category's Product */ = {
+			isa = PBXGroup;
+			children = (
+				928D20B822AA178F00EEDD4F /* CategoryProductsViewControllerTests.swift */,
+				928D20B922AA178F00EEDD4F /* CategoryProductsInteractorTests.swift */,
+				928D20BA22AA178F00EEDD4F /* CategoryProductsWorkerTests.swift */,
+				928D20BB22AA178F00EEDD4F /* CategoryProductsPresenterTests.swift */,
+			);
+			path = "Category's Product";
+			sourceTree = "<group>";
+		};
 		92B2FCD222A474AE00653163 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,7 +404,7 @@
 		92BCC90F22A1F59D009FFDDF /* LodjinhaSZTests */ = {
 			isa = PBXGroup;
 			children = (
-				92BCC91022A1F59D009FFDDF /* LodjinhaSZTests.swift */,
+				928D20B622AA175500EEDD4F /* Scenes */,
 				92BCC91222A1F59D009FFDDF /* Info.plist */,
 			);
 			path = LodjinhaSZTests;
@@ -690,7 +718,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92BCC91122A1F59D009FFDDF /* LodjinhaSZTests.swift in Sources */,
+				928D20BD22AA178F00EEDD4F /* CategoryProductsInteractorTests.swift in Sources */,
+				928D20BF22AA178F00EEDD4F /* CategoryProductsPresenterTests.swift in Sources */,
+				928D20BE22AA178F00EEDD4F /* CategoryProductsWorkerTests.swift in Sources */,
+				928D20BC22AA178F00EEDD4F /* CategoryProductsViewControllerTests.swift in Sources */,
+				928D20C122AA235700EEDD4F /* Seeds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,7 +894,10 @@
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -879,7 +914,10 @@
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -896,7 +934,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -914,7 +956,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -931,7 +977,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -948,7 +998,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -94,14 +94,21 @@ struct BannerViewModel {
 	let bannerLink		:String?
 }
 
-struct CategoryViewModel {
+struct CategoryViewModel:Equatable {
 	
 	let id					: Int?
 	let desc				: String?
 	let categoryImageUrl	: String?
+	
+	static func == (lhs: CategoryViewModel, rhs: CategoryViewModel) -> Bool {
+		
+		return lhs.id == rhs.id &&
+			lhs.desc == rhs.desc &&
+			lhs.categoryImageUrl == rhs.categoryImageUrl
+	}
 }
 
-struct ProductViewModel {
+struct ProductViewModel:Equatable {
 	
 	let category		: CategoryViewModel?
 	let desc			: String?
@@ -111,4 +118,16 @@ struct ProductViewModel {
 	let price			: String?
 	let imageUrl		: String?
 	let isPromotion		: Bool
+	
+	static func == (lhs: ProductViewModel, rhs: ProductViewModel) -> Bool {
+		
+		return lhs.id == rhs.id &&
+			lhs.desc == rhs.desc &&
+			lhs.category == rhs.category &&
+			lhs.name == rhs.name &&
+			lhs.originalPrice == rhs.originalPrice &&
+			lhs.price == rhs.price &&
+			lhs.imageUrl == rhs.imageUrl &&
+			lhs.isPromotion == rhs.isPromotion
+	}
 }
