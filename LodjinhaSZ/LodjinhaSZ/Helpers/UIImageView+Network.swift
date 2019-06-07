@@ -12,7 +12,7 @@ let cache = NSCache<AnyObject, AnyObject>()
 
 extension UIImageView {
 	
-	func setImage(withUrl url: String, placeHolder:String? = nil, completion:((_ success:Bool) -> Void)? = nil){
+	func setImage(withUrl url: String, placeHolder:String? = "placeholder", completion:((_ success:Bool) -> Void)? = nil){
 		
 		guard let url = URL(string: url) else{
 			DispatchQueue.main.async {
@@ -57,7 +57,7 @@ extension UIImageView {
 						}
 					}else{
 						DispatchQueue.main.async {
-							self.image = nil
+							self.image = UIImage(named: "imageError")
 						}
 						if let comp = completion {
 							comp(false)

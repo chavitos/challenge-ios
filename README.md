@@ -1,19 +1,21 @@
-# a Lodjinha
+## a Lodjinha
 
-Versão mínima: iOS 9</br>
-Linguagem: Swift</br>
+**Versão mínima:** iOS 9</br>
+**Linguagem:** Swift</br>
 
-Serão consideradas funcionalidades completas se:</br>
-- O descritivo da funcionalidade for implementado completamente.</br>
-- A tela estiver aderente ao protótipo.</br>
-- Não houver bugs impeditivos que atrapalhem ou impossibilitem a execução da funcionalidade.</br>
-- O layout estiver aderente à todos os devices que suportem a versão mínima e superiores.</br>
+**Sobre:** O projeto foi feito utilizando [Clean Swift](http://clean-swift.com), para as funcionalidades a partir da Home, e view code para a tela Sobre. Para ser executado de forma correta, siga os passos descritos na seção [Pré-requisitos de compilação](#Pré-requisitos de compilação).
+</br></br>
+## Pré-requisitos de compilação
 
-Serão considerados bônus:</br>
-- UI Testing </br>
-- Unit Testing
+É necessário executar o comando `pod install` na pasta `/challenge-ios/LodjinhaSZ/` para o projeto conseguir rodar o build com sucesso.
 
-## DESAFIO
+Esse comando irá instalar as seguintes dependências:
+
+* [Alamofire](https://github.com/Alamofire/Alamofire#installation) - Utilizado no network manager para as chamadas REST do app
+* [Cartography](https://github.com/robb/Cartography) - Utilizado para as constrains dos elementos da tela Sobre
+</br></br>
+
+## Telas e funcinalidades
 
 ### 1 - Home
 	
@@ -31,7 +33,7 @@ Exibir um menu deslizável horizotal com as categorias, conforme protótipo. O n
 ###### Funcionalidade 03
 Exibir uma lista dos produtos mais vendidos. A lista possui um número fixo de produtos e não há necessidade de scroll infinito. Ao clicar em um produto, o usuário deve ser direcionado à Funcionalidade 05.
 
-### 2 - Listagem de Categorias
+### 2 - Lista de produtos por categoria
 	
 ###### Premissas:
 - A Tab Bar não deve ser exibida.
@@ -42,7 +44,7 @@ Exibir uma lista dos produtos mais vendidos. A lista possui um número fixo de p
 ###### Funcionalidade 04
 Exibir uma lista dos produtos da categoria selecionada, conforme protótipo. O lista possui um número desconhecido de produtos, e deverá ser paginado, limitando a página em 20 registros. Ao tocar em um produto, o usuário deverá ser direcionado à Funcionalidade 05.
 
-### 3 - Exibição de Produto
+### 3 - Detalhe de produto
 
 ###### Premissas:
 - A Tab Bar não deve ser exibida.
@@ -61,32 +63,12 @@ Ao clicar no botão Reservar, o app deve efetuar a reserva do produto com o serv
 
 ###### Funcionalidade 07
 Exibir o logo e o nome do app. Na parte de baixo da tela, exibir o nome do desenvolvedor (seu nome) e a data de desenvolvimento.
+</br></br>
+## Recursos auxiliares
 
-## RECURSOS
+[Protótipo Navegável](https://marvelapp.com/1db0728)
 
-###### Protótipo Navegável
+[Fontes](https://fonts.google.com/specimen/Pacifico)
 
-https://marvelapp.com/1db0728
+[Documentação da API](https://alodjinha.herokuapp.com/swagger-ui.html)
 
-###### Fontes e Cores
-
-https://scene.zeplin.io/project/589a7ec9177ff7932d257334
-
-https://fonts.google.com/specimen/Pacifico
-
-Os arquivos das imagens estão na pasta imagens.
-
-###### Documentação
-
-https://alodjinha.herokuapp.com/swagger-ui.html
-
-## CONCLUSÃO
-
-Crie um Fork desse repositório e envie um pull request.</br>
-Caso seu projeto possua alguma pré condição para ser executado (EX: fazer o pod install), crie um arquivo README.md com um passo a passo para que seja possível executá-lo.</br>
-Projetos que não puderem ser executados não serão avaliados.
-
-# COMEÇAR!!!
-
-Foque em entregar funcionalidades completas!</br></br>
-Quantidade não é qualidade!
