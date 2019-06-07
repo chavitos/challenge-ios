@@ -15,7 +15,7 @@ class CustomTabBar: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		let selectedColor = UIColor(red: 94/255, green: 42/255, blue: 132/255, alpha: 1.0)
+		let selectedColor = UIColor.prettyPurple
 		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : selectedColor], for: .selected)
 
 		let selectedImageHome = UIImage(named: "homeActive")?.withRenderingMode(.alwaysOriginal)

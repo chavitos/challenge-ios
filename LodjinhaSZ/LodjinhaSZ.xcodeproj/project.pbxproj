@@ -22,6 +22,11 @@
 		9226BF0922A6259D0054FCD2 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9226BF0822A6259D0054FCD2 /* ProductTableViewCell.swift */; };
 		9226BF0B22A62AE00054FCD2 /* BannerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9226BF0A22A62AE00054FCD2 /* BannerScrollView.swift */; };
 		9253C19A22A34214005F6580 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253C19922A34214005F6580 /* NetworkManager.swift */; };
+		928D20AC22A9E3A700EEDD4F /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D20AB22A9E3A700EEDD4F /* CodeView.swift */; };
+		928D20AE22A9E41C00EEDD4F /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D20AD22A9E41C00EEDD4F /* CustomViewController.swift */; };
+		928D20B022A9E45A00EEDD4F /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D20AF22A9E45A00EEDD4F /* AppStyle.swift */; };
+		928D20B322A9E59900EEDD4F /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D20B222A9E59900EEDD4F /* AppInfoView.swift */; };
+		928D20B522A9E65800EEDD4F /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D20B422A9E65800EEDD4F /* AppInfoViewController.swift */; };
 		928D693522A8E377003EC08E /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D692F22A8E377003EC08E /* ProductDetailPresenter.swift */; };
 		928D693622A8E377003EC08E /* ProductDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693022A8E377003EC08E /* ProductDetailWorker.swift */; };
 		928D693722A8E377003EC08E /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D693122A8E377003EC08E /* ProductDetailRouter.swift */; };
@@ -97,6 +102,11 @@
 		9226BF0822A6259D0054FCD2 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		9226BF0A22A62AE00054FCD2 /* BannerScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerScrollView.swift; sourceTree = "<group>"; };
 		9253C19922A34214005F6580 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		928D20AB22A9E3A700EEDD4F /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		928D20AD22A9E41C00EEDD4F /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		928D20AF22A9E45A00EEDD4F /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		928D20B222A9E59900EEDD4F /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
+		928D20B422A9E65800EEDD4F /* AppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
 		928D692F22A8E377003EC08E /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
 		928D693022A8E377003EC08E /* ProductDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailWorker.swift; sourceTree = "<group>"; };
 		928D693122A8E377003EC08E /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
@@ -229,6 +239,7 @@
 				92B2FCD222A474AE00653163 /* Home */,
 				92E6A00A22A83B9800B93826 /* Category's Products */,
 				92B4160B22A8DE2F00EFBFD1 /* ProductDetail */,
+				928D20B122A9E57B00EEDD4F /* App Info */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -241,6 +252,25 @@
 				9226BF0822A6259D0054FCD2 /* ProductTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		928D20AA22A9E38C00EEDD4F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				928D20AB22A9E3A700EEDD4F /* CodeView.swift */,
+				928D20AD22A9E41C00EEDD4F /* CustomViewController.swift */,
+				928D20AF22A9E45A00EEDD4F /* AppStyle.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		928D20B122A9E57B00EEDD4F /* App Info */ = {
+			isa = PBXGroup;
+			children = (
+				928D20B222A9E59900EEDD4F /* AppInfoView.swift */,
+				928D20B422A9E65800EEDD4F /* AppInfoViewController.swift */,
+			);
+			path = "App Info";
 			sourceTree = "<group>";
 		};
 		92B2FCD222A474AE00653163 /* Home */ = {
@@ -328,6 +358,7 @@
 		92BCC8FA22A1F59D009FFDDF /* LodjinhaSZ */ = {
 			isa = PBXGroup;
 			children = (
+				928D20AA22A9E38C00EEDD4F /* Common */,
 				92B2FCE922A4CD6000653163 /* Custom */,
 				92B2FCD322A485DB00653163 /* Helpers */,
 				9222034F22A30880003614DC /* Managers */,
@@ -588,10 +619,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LodjinhaSZ/Pods-LodjinhaSZ-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -611,6 +644,7 @@
 				9222035A22A30D23003614DC /* DataList.swift in Sources */,
 				92B127CF22A650E100099989 /* String+HTML.swift in Sources */,
 				92BCC8FC22A1F59D009FFDDF /* AppDelegate.swift in Sources */,
+				928D20B022A9E45A00EEDD4F /* AppStyle.swift in Sources */,
 				9222035822A30BA4003614DC /* Product.swift in Sources */,
 				92B2FCE822A4C99900653163 /* CustomTabBar.swift in Sources */,
 				92E6A01822A8702200B93826 /* CategoryProductsNetworkWorker.swift in Sources */,
@@ -620,6 +654,7 @@
 				92E6A01322A83BD700B93826 /* CategoryProductsRouter.swift in Sources */,
 				928D693622A8E377003EC08E /* ProductDetailWorker.swift in Sources */,
 				9226BF0022A604FF0054FCD2 /* NumberFormatter+Currency.swift in Sources */,
+				928D20AE22A9E41C00EEDD4F /* CustomViewController.swift in Sources */,
 				92B2FCEB22A4D3BA00653163 /* CategoryListNetworkWorker.swift in Sources */,
 				9221D8AB22A4369800E7133A /* ProductReserve.swift in Sources */,
 				9226BF0B22A62AE00054FCD2 /* BannerScrollView.swift in Sources */,
@@ -627,8 +662,11 @@
 				928D693922A8E377003EC08E /* ProductDetailViewController.swift in Sources */,
 				92B2FCD522A485E700653163 /* UIImageView+Network.swift in Sources */,
 				928D693C22A8EA9C003EC08E /* CornerRadiusButton.swift in Sources */,
+				928D20B322A9E59900EEDD4F /* AppInfoView.swift in Sources */,
+				928D20B522A9E65800EEDD4F /* AppInfoViewController.swift in Sources */,
 				92E6A01622A83BD700B93826 /* CategoryProductsInteractor.swift in Sources */,
 				928D693E22A8F493003EC08E /* ReserveProductNetworkWorker.swift in Sources */,
+				928D20AC22A9E3A700EEDD4F /* CodeView.swift in Sources */,
 				92B2FCDC22A4868E00653163 /* HomePresenter.swift in Sources */,
 				928D693A22A8E377003EC08E /* ProductDetailInteractor.swift in Sources */,
 				92E6A01C22A8DABC00B93826 /* CategoryProductsViewController.swift in Sources */,
@@ -824,10 +862,7 @@
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -844,10 +879,7 @@
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -864,11 +896,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -886,11 +914,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -907,11 +931,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -928,11 +948,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = LodjinhaSZUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.chavitos.LodjinhaSZUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

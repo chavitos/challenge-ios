@@ -48,6 +48,7 @@ enum ProductDetail {
 		struct ViewModel {
 			
 			var message:String
+			var error:Error?
 		}
 	}
 }

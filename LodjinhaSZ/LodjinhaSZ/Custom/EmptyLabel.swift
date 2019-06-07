@@ -18,7 +18,7 @@ class EmptyLabel: UILabel {
 		
 		self.text          		= message ?? ""
 		self.textColor     		= UIColor.black
-		self.backgroundColor 	= UIColor(red: 252/255, green: 252/255, blue: 252/255, alpha: 1.0)
+		self.backgroundColor 	= UIColor.background
 		self.textAlignment 		= .center
 		self.numberOfLines 		= 2
 	}

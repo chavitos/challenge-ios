@@ -40,6 +40,6 @@ class ProductDetailPresenter: ProductDetailPresentationLogic {
 			message = "Produto reservado com sucesso"
 		}
 		
-		viewController?.displayReserveMessage(viewModel: ProductDetail.ReserveProduct.ViewModel(message: message))
+		viewController?.displayReserveMessage(viewModel: ProductDetail.ReserveProduct.ViewModel(message: message, error: response.error))
 	}
 }

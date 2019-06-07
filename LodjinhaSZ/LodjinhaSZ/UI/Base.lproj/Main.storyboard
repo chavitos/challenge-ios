@@ -125,7 +125,7 @@
                                     <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="productCell" rowHeight="110" id="X8Q-Tz-ebx" customClass="ProductTableViewCell" customModule="LodjinhaSZ" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="productCell" id="X8Q-Tz-ebx" customClass="ProductTableViewCell" customModule="LodjinhaSZ" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X8Q-Tz-ebx" id="pxU-qN-opP">
@@ -281,7 +281,7 @@
                                     <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="productCell" rowHeight="110" id="77j-6Q-k9r" customClass="ProductTableViewCell" customModule="LodjinhaSZ" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="productCell" id="77j-6Q-k9r" customClass="ProductTableViewCell" customModule="LodjinhaSZ" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="77j-6Q-k9r" id="IZb-bT-14A">
@@ -464,6 +464,9 @@
                                 <state key="normal" title="Reservar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="8"/>
@@ -473,6 +476,10 @@
                                     <action selector="reserveProduct:" destination="3Ae-AL-Neu" eventType="touchUpInside" id="irI-K5-ngJ"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QXH-5e-zKQ">
+                                <rect key="frame" x="177.5" y="507" width="20" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -480,9 +487,11 @@
                             <constraint firstAttribute="trailing" secondItem="kyb-vt-GDt" secondAttribute="trailing" id="4rR-p7-FK9"/>
                             <constraint firstItem="kyb-vt-GDt" firstAttribute="leading" secondItem="EMj-DJ-IJk" secondAttribute="leading" id="6cx-L6-qnb"/>
                             <constraint firstItem="HWH-7v-DTY" firstAttribute="top" secondItem="tGK-7d-msv" secondAttribute="bottom" constant="9.5" id="7lX-Eq-jN9"/>
+                            <constraint firstItem="QXH-5e-zKQ" firstAttribute="centerX" secondItem="o74-fa-KWF" secondAttribute="centerX" id="88o-KA-sfZ"/>
                             <constraint firstItem="RVe-Zh-cVg" firstAttribute="top" secondItem="sdn-Hy-31k" secondAttribute="bottom" constant="10" id="8WY-2h-Zpj"/>
                             <constraint firstAttribute="trailing" secondItem="tGK-7d-msv" secondAttribute="trailing" id="8zx-eP-YUb"/>
                             <constraint firstItem="sdn-Hy-31k" firstAttribute="top" secondItem="HWH-7v-DTY" secondAttribute="bottom" constant="10" id="9HK-za-mHU"/>
+                            <constraint firstItem="QXH-5e-zKQ" firstAttribute="centerY" secondItem="o74-fa-KWF" secondAttribute="centerY" id="At5-9S-ifD"/>
                             <constraint firstItem="Iim-9o-Gtx" firstAttribute="trailing" secondItem="RVe-Zh-cVg" secondAttribute="trailing" constant="10" id="BXN-7K-xKe"/>
                             <constraint firstItem="KVi-vd-nWM" firstAttribute="centerX" secondItem="Gjr-W3-eX6" secondAttribute="centerX" id="GQK-Ou-vrp"/>
                             <constraint firstItem="Iim-9o-Gtx" firstAttribute="trailing" secondItem="o74-fa-KWF" secondAttribute="trailing" constant="10" id="GcM-np-nlM"/>
@@ -517,6 +526,7 @@
                         <outlet property="productDescTextView" destination="RVe-Zh-cVg" id="D3P-HU-RHp"/>
                         <outlet property="productImageView" destination="7yd-vT-Yjm" id="1SO-Jz-ovB"/>
                         <outlet property="productNameLabel" destination="1PJ-KB-oVv" id="dhx-0s-3bf"/>
+                        <outlet property="reserveProductActivityIndicator" destination="QXH-5e-zKQ" id="4d6-nE-HT0"/>
                         <outlet property="reserveProductButton" destination="o74-fa-KWF" id="FhA-OS-eIm"/>
                     </connections>
                 </viewController>
@@ -527,7 +537,7 @@
         <!--Sobre-->
         <scene sceneID="Xdm-ks-sWM">
             <objects>
-                <viewController id="tSx-ym-dw9" sceneMemberID="viewController">
+                <viewController id="tSx-ym-dw9" customClass="AppInfoViewController" customModule="LodjinhaSZ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5wJ-TA-ofS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -590,7 +600,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OF2-ej-Wa4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sobre" image="tagDeselected" selectedImage="tagSelected" id="G9X-7C-Z98"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="l0n-iL-Tlc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" shadowImage="fillVertical" id="l0n-iL-Tlc">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.41568627450000001" green="0.23921568630000001" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -618,6 +628,6 @@
         <image name="tagSelected" width="12.5" height="12.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QAI-g2-AS0"/>
+        <segue reference="fGr-mb-3bg"/>
     </inferredMetricsTieBreakers>
 </document>

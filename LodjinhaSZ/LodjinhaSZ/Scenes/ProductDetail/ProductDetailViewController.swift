@@ -127,19 +127,36 @@ class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic {
 	// MARK: Reserve Product
 	
 	@IBOutlet weak var reserveProductButton: CornerRadiusButton!
+	@IBOutlet weak var reserveProductActivityIndicator: UIActivityIndicatorView!
 	
 	@IBAction func reserveProduct(_ sender: Any) {
 		
+		self.reserveProductButton.isEnabled = false
+		reserveProductActivityIndicator.startAnimating()
 		interactor?.reserveProduct(request: ProductDetail.ReserveProduct.Request())
 	}
 	
 	func displayReserveMessage(viewModel: ProductDetail.ReserveProduct.ViewModel) {
 		
 		let alert = UIAlertController(title: "", message: viewModel.message, preferredStyle: .alert)
-		let action = UIAlertAction(title: "Ok", style: .default)
+		var action:UIAlertAction
+		
+		if viewModel.error == nil {
+			action = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+				
+				self.navigationController?.popViewController(animated: true)
+			})
+		}else{
+		
+			action = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+				
+				self.reserveProductButton.isEnabled = true
+			})
+		}
 		
 		alert.addAction(action)
 		
+		reserveProductActivityIndicator.stopAnimating()
 		present(alert, animated: true)
 	}
 	
